@@ -1,0 +1,517 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**** END RESET ****/
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/**********************************************************
+*
+* formatting
+*
+***********************************************************/
+
+a {
+	text-decoration: none;
+	}
+	
+h1 {
+	margin-left: 10px
+	}
+	
+.ssosection img, .nonssosection img {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: .5em;
+	}
+	
+.ssosection p, .nonssosection p {
+	text-align: center;
+	}
+
+.accountrequest p {
+	margin-left: 10px;
+	padding: 1em 0 0 0;
+	}
+
+.sectionwrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2em 0 2em 0;
+	overflow: hidden;
+	}	
+	
+	
+	
+/********** HELP formattting ***********/
+.help {
+	border-style: solid;
+	border-top-width: 6px;
+	}
+
+.help .sectionwrapper{
+	background: url('../images/helpbg.png') no-repeat right top;
+	padding: .3em 0 .1em 0;
+	}
+	
+.help ul {
+	text-align: right;
+	margin: 0;
+	border-radius: 0 0 5px 5px;
+	font-size: .9em;
+	padding-right: 25px;
+	}
+
+.help li {
+	list-style:none;
+	display: inline;
+	padding: .5em .5em 0 .5em;
+	vertical-align: bottom;
+	}
+	
+.help .helptitle {
+	margin: 0 0 .25em 0;
+	text-align: center;
+	}
+
+	
+	
+	
+/********** Header formatting ******/
+.header {
+	padding: 2em 0 1em 0;
+	border-style: solid;
+	/* border-bottom-width: 1px; 
+	border-style: dotted;
+	border-bottom-width: 1px;
+	border-color: #333; */
+	}
+	
+.header .sectionwrapper {
+	padding: 0 10px;
+	}
+	
+/******* Special Notice formatting ***********/
+.notice {
+                background: #f2f2f2;
+                }
+
+.noticewrapper {
+                padding: 15px 0px;
+                max-width: 960px;
+                margin: 0 auto;
+                }
+                
+.specialnotice {
+                color: #cc9900;
+                }
+                
+.notice h1 {
+                line-height: 1.5;
+                }
+
+/****** SSO/Non-SSO Formatting *********/	
+.ssosection .sectionwrapper, .nonssosection .sectionwrapper {
+	border-style: dotted;
+	border-top-width: 1px;
+	}
+	
+.syslist {
+	display: block;
+	padding: 1em 0;
+	margin: 0 auto;
+	max-width: 960px;
+	overflow: hidden;
+	}
+
+/* System tile formatting */	
+.sys {
+	width: 280px;
+	float: left;
+	border-radius: 5px 5px 0 0;
+	border: solid 1px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 0 10px;
+	transition: all 0.3s ease 0s;
+	}
+	
+.systext {
+	border-top: solid 1px;
+	padding: 1em .5em;
+	height: 120px;
+	}
+/* End system tile formatting */
+	
+.button {
+	margin-left: 10px;
+	display: inline-block;
+	border-radius: 3px;
+	padding: .5em;
+	transition: all 0.3s ease 0s;
+	}
+	
+
+
+/******* Account Request formatting ****/	
+.formdiv {
+	width: 35%;
+	display: block;
+	margin: 1em auto 0 auto;
+	text-align: center;
+	}
+
+.formimg {
+	width: 104px;
+	position: relative;
+	transition: all 0.3s ease 0s;
+	padding-bottom: 5px;
+	}
+	
+.formimg:hover {
+	padding-top: 5px;
+	padding-bottom: 0px;
+	}
+
+
+/************ Footer formatting **********/	
+.footer .sectionwrapper {
+	padding: 2em 0;
+	}
+	
+.footer li {
+	display: block;
+	text-align: center;
+	margin: .5em 0;
+	}
+	
+.ribbon {
+	display: block;
+	padding-top: .5em;
+	}
+		
+
+
+		
+		
+		
+		
+/****************************************************
+*
+* colors/theme
+*
+****************************************************/
+
+html {
+	background: #231F20;
+	}
+
+h1 {
+	color: #574D4F;
+	}
+	
+a {
+	color: #000;
+	}
+
+/********* Help **************/
+.help {
+	background: #fff;
+	color: #808080;
+	border-color: #ffcc00;
+	}
+	
+.help a {
+	color: #808080;
+	}
+	
+.help a:hover {
+	color: #cc9900;
+	}
+	
+.helptitle {	
+	color: #cc9900;
+	}
+
+.middletext {
+	vertical-align: bottom;
+	}
+
+
+
+/******** Header ***************/	
+.header {
+	background: #fff;
+	}
+	
+.header h1 {
+	color: #ffcc00;
+	}
+
+	
+	
+/****** SSO/NON-SSO *************/	
+.ssosection {
+	background: #fff;
+	}
+	
+.nonssosection {
+	background: #FFF;
+	}
+
+.accountrequest {
+	background: #EBEBEB;
+	}
+	
+.sectionwrapper {
+	border-color: #dbdbdb;
+	}
+
+.sys {
+	border-color: #e6e6e6;
+	background: #EBEBEB;
+	background: #fff;
+	color: #808080;
+	}
+	
+.sys:hover {
+	background: #FAFAFA;
+	background: #ebebeb;
+	border-color: #c2c2c2; 
+	}
+	
+.systext {
+	border-color: #e0e0e0;
+	}
+	
+.button {
+	background: #ffcc00;
+	color: #000;
+	}
+	
+.button:hover {
+	background: #FFE375;
+	}
+	
+.button:active {
+	background: #cc9900;
+	}
+
+	
+	
+/****** Account Request ********/	
+.accountrequest a:hover {
+	color: #cc9900;
+	}
+
+	
+
+/********* Footer **************/	
+.footer {
+	background: #231F20; 
+	color: #ffcc00;
+	}
+
+.footer a {
+	color: #ffcc00;
+	}
+	
+
+
+
+
+	
+/****************************************************
+*
+* fonts
+*
+****************************************************/
+
+body{
+	font-family: "Century Gothic", CenturyGothic, Helvetica, sans-serif;
+	}
+	
+.helptitle {
+	font-weight: bold;
+	}
+	
+
+.ssosection a, .nonssosection a {
+	text-decoration: none;
+	line-height: 1.25em;
+	}
+	
+h1{
+	display: inline-block;
+	font-size: 1.5em;
+	vertical-align: bottom;
+	line-height: 115%;
+	font-weight: bold;
+	}
+	
+.title {
+	font-size: 3em;
+	text-transform: uppercase;
+	margin-left: 0;
+	font-weight: bold;
+	}
+
+.button {
+	font-size: 1.25em;
+
+	}
+	
+.footer {
+	font-size: .875em;
+	}
+	
+	
+/***************************************************
+*
+* MOBILE DEVICES 
+*
+****************************************************/
+	
+/************* TABLETS ************************/
+@media only screen and (min-width: 650px) and (max-width: 959px) {	
+
+.sys {
+	width: 47%;
+	margin-top: 0;
+	}
+
+.systext {
+	display: none;
+	}
+
+.button {
+	display: inline-block;
+	font-size: 1em;
+	}
+	
+}
+
+/************ Phones and small tablets ****************/
+@media only screen and (max-width: 649px) {	
+
+h1 {
+	margin-left: 0;
+	font-size: 1.5em;
+	}
+
+.sectionwrapper {
+	padding-right: 10px;
+	padding-left: 10px;
+	}
+
+/*********** Help *************/	
+.help {
+	background: #FFE680;
+	}
+	
+.help ul {
+	width: 100%;
+	}
+
+.help li {
+	display: block;
+	text-align: left;
+	padding: 0 0 .25em 0;
+	}
+	
+.help .sectionwrapper {
+	padding-left: 10px;
+	background: none;
+	}
+	
+.help .helptitle {
+	padding-top: 5px;
+	padding-bottom: 0;
+	text-align: left;
+	}
+
+	
+	
+.title {
+	font-size: 2em;
+	}
+	
+.syslist {
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+.systext {
+	display: none;
+	}
+
+.button {
+	display: inline-block;
+	font-size: 1em;
+	}
+
+.sys {
+	margin-top: 0;
+	}
+	
+.sys, .button {
+	margin-left: 0;
+	width: 100%;
+	text-align: center;
+	}
+	
+.accountrequest p {
+	margin-left: 0;
+	}
+	
+.formdiv {
+	width: 100%;
+	}
+	
+}
