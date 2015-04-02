@@ -83,7 +83,7 @@ h1 {
 .sectionwrapper {
 	max-width: 960px;
 	margin: 0 auto;
-	padding: 2em 0 2em 0;
+	padding: 1em 0 2em 0;
 	overflow: hidden;
 	}	
 	
@@ -96,7 +96,7 @@ h1 {
 	}
 
 .help .sectionwrapper{
-	background: url('../images/helpbg.png') no-repeat right top;
+	background: url('../images/ldg_helpbg.png') no-repeat right top;
 	padding: .3em 0 .1em 0;
 	}
 	
@@ -144,7 +144,7 @@ h1 {
 
 .noticewrapper {
                 padding: 15px 0px;
-                max-width: 960px;
+                max-width: 910px;
                 margin: 0 auto;
                 }
                 
@@ -158,8 +158,8 @@ h1 {
 
 /****** SSO/Non-SSO Formatting *********/	
 .ssosection .sectionwrapper, .nonssosection .sectionwrapper {
-	border-style: dotted;
-	border-top-width: 1px;
+	/* border-style: dotted;
+	border-top-width: 1px; */
 	}
 	
 .syslist {
@@ -169,13 +169,6 @@ h1 {
 	max-width: 960px;
 	overflow: hidden;
 	}
-.syslistslim {
-	display: block;
-	padding: 0;
-	margin: 0 auto;
-	max-width: 960px;
-	overflow: hidden;
-	}	
 
 /* System tile formatting */	
 .sys {
@@ -192,7 +185,7 @@ h1 {
 .systext {
 	border-top: solid 1px;
 	padding: 1em .5em;
-	height: 120px;
+	height: 80px;
 	}
 /* End system tile formatting */
 	
