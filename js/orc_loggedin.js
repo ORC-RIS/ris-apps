@@ -10,13 +10,12 @@ function ExecuteWebSiteSearchQuery(){
 	document.getElementById('ucfhb-search-form').submit();
 }
 
-
 function appdrawermover(){
-	$("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer_hover.png");
+	jQuery("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer_hover.png");
 }
 
 function appdrawermout(){
-	$("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer.png");
+	jQuery("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer.png");
 }
 
 var _gaq = _gaq || [];
@@ -324,13 +323,13 @@ function ucfhbSetJsonp(f) {
 			}
 		};
 		// code for disabling search button when string is null - Rob
-		$('input[type="button"]').attr('disabled','disabled');
-		$('input[type="text"]').keyup(function(){
-			if($('input[type="text"]').val() == ""){
-				$('input[type="button"]').attr('disabled','disabled');
+		jQuery('#ucfhb-search-submit').attr('disabled','disabled');
+		jQuery('input[type="text"]').keyup(function(){
+			if(jQuery('input[type="text"]').val() == ""){
+				jQuery('input[type="button"]').attr('disabled','disabled');
 			}
 			else{
-				$('input[type="button"]').removeAttr('disabled');
+				jQuery('input[type="button"]').removeAttr('disabled');
 			}
 		})
 	
@@ -617,12 +616,12 @@ function ucfhbSetJsonp(f) {
 					for (var c = a.length, d = 0; d < c; d++) - 1 < a[d].className.indexOf("ucfhb-gold") ? a[d].className = "ucfhb-gold " + b : a[d].className = b
 				};
 				d.onclick = function () {
-					if($("#ucf-research-apps").attr("onmouseout")!=''){
-						$("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer_hover.png");
-						$("#ucf-research-apps").attr("onmouseout","");
+					if(jQuery("#ucf-research-apps").attr("onmouseout")!=''){
+						jQuery("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer_hover.png");
+						jQuery("#ucf-research-apps").attr("onmouseout","");
 					} else{
-						$("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer.png");
-						$("#ucf-research-apps").attr("onmouseout","appdrawermout()");
+						jQuery("#ucf-research-apps").attr("src", ""+address+"Images/appdrawer.png");
+						jQuery("#ucf-research-apps").attr("onmouseout","appdrawermout()");
 					}
 					"ucfhb-shiftleft" == d.className ? (m(shiftLeftElems, ""), searchField.removeAttribute("tabindex"), searchBtn.removeAttribute("tabindex")) : (m(shiftLeftElems, "ucfhb-shiftleft"), searchField.setAttribute("tabindex", "-1"), searchBtn.setAttribute("tabindex", "-1"))
 				};
@@ -687,7 +686,7 @@ function ucfhbSetJsonp(f) {
 		c = null;
 		document.getElementById("ucfhb") ? c = document.getElementById("ucfhb") : (c = document.createElement("div"), c.id = "ucfhb", document.body.insertBefore(c, document.body.firstChild));
 		c.className += " preload";
-		c.innerHTML = ['<div id="ucfhb-inner" style="display: none;">\n<div id="ucfhb-left">\n<div id="ucfhb-logo"></div>\n<div id="ucfhb-logo-main" style="max-width:100%;height:auto;" class="hidden-md hidden-sm hidden-lg">\n<img src="'+address+'Images/ucf_research_logo.png" usemap="#logos" style="max-width:85%;height:auto;"/><map name="logos"><area shape="rect" coords="0,0,321,27" href="http://www.ucf.edu/" title="UCF Main Site" alt="UCF Main Site" /><area shape="rect" coords="0,0,407,27" href="http://www.research.ucf.edu/" title="ORC Main Site" alt="ORC Main Site" /></map>\n</div><div id="ucfhb-logo-main" class="hidden-xs">\n<img src="'+address+'Images/ucf_research_logo.png" usemap="#logos"/><map name="logos"><area shape="rect" coords="0,0,321,27" href="http://www.ucf.edu/" title="UCF Main Site" alt="UCF Main Site" /><area shape="rect" coords="0,0,407,27" href="http://www.research.ucf.edu/" title="ORC Main Site" alt="ORC Main Site" /></map>\n</div>\n<a id="ucfhb-mobile-toggle" href="#">Open Mobile Menu</a>\n</div>\n<div id="ucfhb-right">\n<div class="hidden-sm hidden-xs"><div id="ucfhb-signon">\n<a id="ucfhb-signon-logo1" href="#"><img id="ucf-research-apps" src="'+address+'Images/appdrawer.png" onmouseover="appdrawermover()" onmouseout="appdrawermout()"/>\n\n</a>\n<div id="ucfhb-services" style="z-index:9;margin-top:-8px;position:relative;margin-left:-155px;">\n<div id="Drawer" style="margin-top:-45px;"><center><div class="arrow-up"></div></center>\n\n<div id="list">\n<ul>\n<li >\n<a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank"><img src="images/ldg_argis.png" width="90" height="45"/></a>\n</li>\n<li><a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="images/ldg_paris.png" width="90" height="45"/></a>\n</li>\n<li class="removeSidebar"><a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="images/ldg_tera.png" width="90" height="45"/></a>\n</li>\n</ul>\n<ul>\n<li class="">\n<a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="images/ldg_aurora.png" width="90" height="45"/></a>\n</li>\n<li class="">\n<a href="https://iris.research.ucf.edu/" target="_blank"><img src="images/ldg_iris.png" width="90" height="45"/></a>\n</li>\n<li class="">\n<a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank"><img src="images/ldg_ecrt.png" width="90" height="45"/></a>\n</li>\n</ul>\n<center><div class="viewMore"><a href="">View more...</a></div></center></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id="ucfhb-search">', '<form target="_blank" action="http://google.cc.ucf.edu/search" data-action-url="http://google.cc.ucf.edu/search?client=UCF_Main&amp;proxystylesheet=UCF_Main&amp;sitesearch=http%3A%2F%2Fresearch.ucf.edu&amp;q=" data-autosearch-url="http://universityheader.ucf.edu/bar/data/?search=" method="get" name="ucfhb-search-form" id="ucfhb-search-form" autocomplete="off">', '<label for="ucfhb-search-field">Search ORC</label>\n<input type="hidden" name="client" value="UCF_Main" />\n<input type="hidden" name="proxystylesheet" value="UCF_Main" />\n<input type="text" name="q" id="ucfhb-search-field" placeholder="Search ORC" autocomplete="off" autocapitalize="off" aria-autocomplete="off" aria-owns="ucfhb-search-autocomplete" aria-activedescendant="ucfhb-autocomplete-selected" aria-haspopup="true" role="search" />\n<input name="sitesearch" value="http://research.ucf.edu" type="hidden">\n<input id="ucfhb-search-submit" class="button-add" type="button" value="Go" onclick="ExecuteWebSiteSearchQuery();"/>\n</form>\n<span id="ucfhb-search-autocomplete-srhelp" role="status" aria-live="polite"></span>\n<a id="ucfhb-search-minimal" href="#">Search</a>\n</div>\n</div>\n<ul id="ucfhb-search-autocomplete" tabindex="1" aria-hidden="true" role="listbox"></ul>\n<a id="ucfhb-search-autocomplete-close" href="#" alt="Close autocomplete results" title="Close autocomplete results">&times;</a>\n</div>'].join("\n");
+		c.innerHTML = ['<div id="ucfhb-inner" style="display: none;">\n<div id="ucfhb-left">\n<div id="ucfhb-logo"></div>\n<div id="ucfhb-logo-main" style="max-width:100%;height:auto;" class="hidden-md hidden-sm hidden-lg">\n<img src="'+address+'Images/ucf_research_logo.png" usemap="#logos" style="max-width:85%;height:auto;"/><map name="logos"><area shape="rect" coords="0,0,321,27" href="http://www.ucf.edu/" title="UCF Main Site" alt="UCF Main Site" /><area shape="rect" coords="0,0,407,27" href="http://www.research.ucf.edu/" title="ORC Main Site" alt="ORC Main Site" /></map>\n</div><div id="ucfhb-logo-main" class="hidden-xs">\n<img src="'+address+'Images/ucf_research_logo.png" usemap="#logos"/><map name="logos"><area shape="rect" coords="0,0,321,27" href="http://www.ucf.edu/" title="UCF Main Site" alt="UCF Main Site" /><area shape="rect" coords="0,0,407,27" href="http://www.research.ucf.edu/" title="ORC Main Site" alt="ORC Main Site" /></map>\n</div>\n<a id="ucfhb-mobile-toggle" href="#">Open Mobile Menu</a>\n</div>\n<div id="ucfhb-right">\n<div class="hidden-sm hidden-xs"><div id="ucfhb-signon">\n<a id="ucfhb-signon-logo1" href="#"><img id="ucf-research-apps" src="'+address+'Images/appdrawer.png" onmouseover="appdrawermover()" onmouseout="appdrawermout()"/>\n\n</a>\n<div id="ucfhb-services" style="z-index:9;margin-top:-8px;position:relative;margin-left:-155px;">\n<div id="Drawer" style="margin-top:-45px;"><center><div class="arrow-up"></div></center>\n\n<div id="list">\n<ul>\n<li >\n<a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank"><img src="'+address+'images/ldg_argis.png" width="90" height="45"/></a>\n</li>\n<li><a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="'+address+'images/ldg_paris.png" width="90" height="45"/></a>\n</li>\n<li class="removeSidebar"><a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="'+address+'images/ldg_tera.png" width="90" height="45"/></a>\n</li>\n</ul>\n<ul>\n<li class="">\n<a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank"><img src="'+address+'images/ldg_aurora.png" width="90" height="45"/></a>\n</li>\n<li class="">\n<a href="https://iris.research.ucf.edu/" target="_blank"><img src="'+address+'images/ldg_iris.png" width="90" height="45"/></a>\n</li>\n<li class="">\n<a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank"><img src="'+address+'images/ldg_ecrt.png" width="90" height="45"/></a>\n</li>\n</ul>\n<center><div class="viewMore"><a href="">View more...</a></div></center></div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div id="ucfhb-search">', '<form target="_blank" action="http://google.cc.ucf.edu/search" data-action-url="http://google.cc.ucf.edu/search?client=UCF_Main&amp;proxystylesheet=UCF_Main&amp;sitesearch=http%3A%2F%2Fresearch.ucf.edu&amp;q="  method="get" name="ucfhb-search-form" id="ucfhb-search-form" autocomplete="off">', '<label for="ucfhb-search-field">Search ORC</label>\n<input type="hidden" name="client" value="UCF_Main" />\n<input type="hidden" name="proxystylesheet" value="UCF_Main" />\n<input type="text" name="q" id="ucfhb-search-field" placeholder="Search ORC" autocomplete="off" autocapitalize="off" aria-autocomplete="off" aria-owns="ucfhb-search-autocomplete" aria-activedescendant="ucfhb-autocomplete-selected" aria-haspopup="true" role="search" />\n<input name="sitesearch" value="http://research.ucf.edu" type="hidden">\n<input id="ucfhb-search-submit" class="button-add" type="button" value="Go" onclick="ExecuteWebSiteSearchQuery();"/>\n</form>\n<span id="ucfhb-search-autocomplete-srhelp" role="status" aria-live="polite"></span>\n<a id="ucfhb-search-minimal" href="#">Search</a>\n</div>\n<ul id="ucfhb-search-autocomplete" tabindex="1" aria-hidden="true" role="listbox" ></ul>\n<a style="display:none;" id="ucfhb-search-autocomplete-close" href="#" alt="Close autocomplete results" title="Close autocomplete results">&times;</a>\n</div>\n</div>'].join("\n");
 
 		D()
 	})

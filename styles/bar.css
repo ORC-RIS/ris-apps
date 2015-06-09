@@ -58,6 +58,7 @@ input.button-add {
     height: 16px  !important;           /* make this the size of your image */
     vertical-align: middle  !important; /* align the text vertically centered */
 	padding: 0.0em 0.45em !important;
+	margin: 0em !important;
 }
 /*end of appdrawer*/
 
