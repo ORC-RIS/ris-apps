@@ -4,11 +4,9 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="styles/styles.css">
-            <link rel="stylesheet" href="styles/bar.css">
-            <link href="https://universityheader.ucf.edu/bar/css/bar-bootstrap.css" rel="stylesheet" type="text/css"> 
-            <link href="https://universityheader.ucf.edu/bar/css/bar.css" rel="stylesheet" type="text/css">   
+			<link rel="stylesheet" href="//header.webdev1.research.ucf.edu/styles/bar.css">
             <link rel="stylesheet" href="styles/bootstrap-select.css">
+            <link rel="stylesheet" href="styles/styles.css">
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +16,7 @@
            <!-- <script type="text/javascript" src="https://universityheader.ucf.edu/bar/js/university-header.js?use-bootstrap-overrides=1" id='ucfhb-script'> </script> -->
 		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-           <script src="js/orc_loggedin.js"></script>
+           <script src="//header.webdev1.research.ucf.edu/js/ris_header.js"></script>
            <script src="js/bootstrap-select.js"></script>
            <script type="text/javascript">
 		   		$(document).ready(function(e) {
@@ -58,7 +56,6 @@
 				
 				function selectSystems(id){
 					if(id == 'optradio_all'){
-						//alert('Hello 1');
 						$( "div" ).each(function() {
 						  if($(this).hasClass( "sys" )){
 							   if($(this).hasClass( "original" )){ // hide the old coi and io
@@ -71,7 +68,6 @@
 						  } 
 						});
 					}else if(id == 'optradio_ucf'){
-						//alert('Hello 2');
 						$( "div" ).each(function() {
 						  if($(this).hasClass( "sys" )){
 							  if($(this).hasClass( "ucf" )){
@@ -87,7 +83,6 @@
 						  }
 						});
 					}else if(id == 'optradio_departmental'){
-						//alert('Hello 3');
 						$( "div" ).each(function() {
 						  if($(this).hasClass( "sys" )){
 							  if($(this).hasClass( "departmental" )){
@@ -673,9 +668,6 @@
 					</div>
 					<!-- End syslist-->
 					
-					<!--SSO Help-->
-					<a href="http://www.research.ucf.edu/sso/ssohelp.html" class="button" target="_blank">Single Sign-On System Help</a>
-					<a href="https://myid.research.ucf.edu" class="button" target="_blank"><!---ECRT and --->iRIS Sign-On Help</a>
 				</div>
 				<!-- End section wrapper-->
 			</div>
