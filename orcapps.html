@@ -1,86 +1,228 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<link rel="stylesheet" href="styles/styles.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>ORC Apps</title>
-	</head>	
-		
-		<body>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <title>Research Apps</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+			<link rel="stylesheet" href="//header.webdev1.research.ucf.edu/styles/bar.css">
+            <link rel="stylesheet" href="styles/bootstrap-select.css">
+            <link rel="stylesheet" href="styles/styles.css">
+            <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+            <!-- <script type="text/javascript" src="https://universityheader.ucf.edu/bar/js/university-header.js?use-bootstrap-overrides=1" id='ucfhb-script'> </script> -->
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <script src="//header.webdev1.research.ucf.edu/js/ris_header.js" type="text/javascript" id='ucfhb-script'></script>
+            <script src="js/bootstrap-select.js"></script>
+            <script type="text/javascript">
+			
+				function searchSystem(){
+					var str = $('#searchSystem').val();
+					$( ".sys" ).each(function() {
+					  if($(this).hasClass( "sys" )){
+						   var classes = $(this).attr('class').split(" ");
+						   $(this).hide(); 
+						   for (var i = 0; i < classes.length; i++) {
+								if(classes[i]!='sys' && classes[i].indexOf(str) > -1){
+									$(this).show();
+								}
+							}
+					  } 
+					});
+				}
 
-			<!-- Help-->
-			<div class="help">
-				<div class="sectionwrapper">
-					<ul>
-						<li class="helptitle">Need help?</li>
-						<li><img src="images/ldg_phone.png" class="middletext" alt="phone"> &nbsp Call 407.823.5500</li>
-						<li><img src="images/ldg_mail.png" class="middletext" alt="email"><a href="mailto:risservicedesk@ucf.edu"> &nbsp Email risservicedesk@ucf.edu</a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- End Help-->
-			
-			<!-- Header-->
-			<div class="header">
-				<div class="sectionwrapper">
-					<h1 class="title">ORC Web Systems</h1>
-				</div>
-			</div>
-			<!-- End Header-->
-			
+           </script>
+  		   <style>
+		   		/* Writing some of script to override the changes in the main css file */
+                .sys {
+                    border: 1px solid;
+                    border-radius: 5px;
+                    float: left;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                    max-height: 215px;
+                    min-height: 0px !important;
+                    padding: 5px !important;
+                    transition: all 0.5s ease-in-out 0s;
+                    width: 300px;
+                }
+                
+                .sys:hover {
+                    border-radius: 5px !important;
+                    padding: 5px !important;
+                }
+                
+                h1{
+					padding:0 10px 10px 10px;
+					font-size: 18px;
+                }
+				.sectionwrapper{
+					padding:1em 0 1em;
+				}
+				
+				*::-moz-placeholder, ::-webkit-input-placeholder,:-ms-input-placeholder  {
+					color: #555;
+					font-size: 15px !important; 
+					text-align: left;
+				} 
+				#searchSystem{
+					width:96%;
+					padding:7px;
+					margin:10px;
+				}
+            </style>
+        </head>	
+		<body>
+            <div class="panel-default">
+            </div>
+		    <div class="navbar navbar-default">
+              <div class="container-fluid"><br><br><br>
+                   <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand hidden-xs hidden-sm" href="index.html"><strong style="font-size:24px">UCF RESEARCH & COMMERCIALIZATION SYSTEMS</strong></a>
+                   	<span class="navbar-brand hidden-xs hidden-md hidden-lg"><a href=""><strong style="font-size:15px;font-weight:bold;">UCF RESEARCH & COMMERCIALIZATION SYSTEMS</strong></a></span>
+                    <span class="navbar-brand hidden-sm hidden-md hidden-lg"><a href=""><strong style="font-size:12px;font-weight:bold;">UCF RESEARCH & COMM SYSTEMS</strong></a></span>
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                      </button>	
+                    </div>
+                    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right" style="margin-left:-20px;">
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-expanded="false"><strong style="font-size:18px">NEED HELP?</strong></a>
+                              <a href="ssohelp.html" class="hidden-sm hidden-md hidden-lg"><strong style="font-size:18px">SINGLE SIGN-ON HELP</strong></a>
+                              <a href="irishelp.html" class="hidden-sm hidden-md hidden-lg"><strong style="font-size:18px">IRIS SIGN-ON HELP</strong></a>
+                              <ul class="dropdown-menu" role="menu" >
+                                <li class="hidden-xs">
+                                    <div style="width:550px;">
+                                    	<div >
+                                        	<table>
+                                                <tr>
+                                                    <tD style="padding:5px;">
+                                                        <table>
+                                                            <tr>
+                                                                <td style="padding:10px;font-weight:bold;"> 
+                                                                    <strong><img src="images/ldg_mail.png" width="24" height="15"/>&nbsp;&nbsp;EMAIL: <a href="mailto:risservicedesk@ucf.edu">risservicedesk@ucf.edu</a></strong>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:10px;font-weight:bold;"> 
+                                                                    <strong><img src="images/ldg_phone.png" width="16" height="25"/>&nbsp;&nbsp;&nbsp;CALL: 407.823.5500</strong>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <tD class="separatortd">
+                                                        	
+                                                    </tD>
+                                                    <td style="padding:5px;">
+                                                        <table>
+                                                            <tr>
+                                                                <td style="padding:5px;"> 
+                                                               		<a href="ssohelp.html">
+                                                                    <div class="navigationbarchildwithmargin">
+                                                                    	
+	                                                                    	SINGLE SIGN-ON SYSTEM HELP
+                                                                        
+                                                                    </div>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding:5px;"> 
+                                                                	<a href="irishelp.html">
+                                                                    <div class="navigationbar">
+                                                                    		IRIS SIGN-ON HELP
+                                                                    </div>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </li>
+                              </ul>
+                        </li>
+						</ul>
+                      </div><!-- /.navbar-collapse -->
+                    </div>  
+              </div><!-- /.container-fluid -->
+        </div>     
 			<div class="ssosection">
 				<div class="sectionwrapper">
-										
-					<h1>PROD Systems</h1>
+                	<!--- A search field to filter the systems --->
+					<div>
+		            	<input type="text" id="searchSystem" name="searchSystem" value="" onKeyUp="searchSystem()" style="" placeholder="Search Systems" autofocus/>
+        		    </div>      
 
+					<h1>PROD Systems</h1>
 					<div class="syslistslim">
-						<a href="https://angelnetwork.research.ucf.edu" class="sys" target="_blank">Angel Network (FAN)</a>
+						<a href="https://angelnetwork.research.ucf.edu" class="sys fan angelnetwork" target="_blank">Angel Network/FAN</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="https://argis.research.ucf.edu" class="sys" target="_blank">ARGIS (third-party)</a>
+						<a href="https://argis.research.ucf.edu" class="sys argis crata ist 3rdparty" target="_blank">ARGIS (CRATA)</a>
 					</div>	
 					<div class="syslistslim">
-						<a href="https://reports.research.ucf.edu" class="sys" target="_blank">AURORA</a>
+						<a href="https://argis.research.ucf.edu/coi/index.cfm" class="sys coi argis crata ist 3rdparty" target="_blank">ARGIS COI (CRATA)</a>
+					</div>	
+					<div class="syslistslim">
+						<a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" class="sys argislimitedsubmissioninternalfundingcrata" target="_blank">ARGIS Internal Funding (CRATA)</a>
+					</div>	
+					<div class="syslistslim">
+						<a href="https://citi.research.ucf.edu" class="sys citi 3rdparty" target="_blank">CITI (Uni of Miami)</a>
+					</div>						
+					<div class="syslistslim">
+						<a href="https://reports.research.ucf.edu" class="sys aurora" target="_blank">AURORA</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://bipreports.research.ucf.edu" class="sys" target="_blank">BIP Reporting</a>
+						<a href="https://bipreports.research.ucf.edu" class="sys bip" target="_blank">BIP Reporting</a>
 					</div>	                    				
 					<div class="syslistslim">
-						<a href="https://ecrt4.research.ucf.edu/ecrt/" class="sys" target="_blank">ECRT v4.5 (third-party)</a>
+						<a href="https://ecrt4.research.ucf.edu/ecrt/" class="sys ecrt huron 3rdparty" target="_blank">ecrt v4.5 (Huron)</a>
 					</div>	
 					<div class="syslistslim">
-						<a href="http://efacs.research.ucf.edu/efacs/initLogin.action" class="sys" target="_blank">eFACS (third-party)</a>
+						<a href="http://efacs.research.ucf.edu/efacs/initLogin.action" class="sys efacs huron 3rdparty" target="_blank">efacs (Huron)</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://iqorlando.research.ucf.edu/" class="sys" target="_blank">IQ Orlando</a>
+						<a href="https://iqorlando.research.ucf.edu/" class="sys iqorlando" target="_blank">IQ Orlando</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://iris.research.ucf.edu" class="sys" target="_blank">iRIS (third-party)</a>
+						<a href="https://iris.research.ucf.edu" class="sys iris 3rdparty" target="_blank">iRIS (iMedRIS)</a>
 					</div>																																	
 					<div class="syslistslim">
-						<a href="https://myid.research.ucf.edu" class="sys" target="_blank">My ID</a>
+						<a href="https://myid.research.ucf.edu" class="sys myid" target="_blank">My ID</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://move.research.ucf.edu" class="sys" target="_blank">MOVE</a>
+						<a href="https://move.research.ucf.edu" class="sys move" target="_blank">MOVE</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://paris.research.ucf.edu" class="sys" target="_blank">PARIS</a>
+						<a href="https://paris.research.ucf.edu" class="sys paris" target="_blank">PARIS</a>
 					</div>			
 					<div class="syslistslim">
-						<a href="http://pda.research.ucf.edu" class="sys" target="_blank">OOR PDA</a>
+						<a href="https://login.salesforce.com" class="sys salesforce" target="_blank">SalesForce</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://securedocs.research.ucf.edu" class="sys" target="_blank">Secure Docs</a>
+						<a href="https://securedocs.research.ucf.edu" class="sys securedocs" target="_blank">Secure Docs</a>
 					</div>                    
 					<div class="syslistslim">
-						<a href="https://super.research.ucf.edu" class="sys" target="_blank">SuPeR</a>
+						<a href="https://super.research.ucf.edu" class="sys super" target="_blank">SuPeR</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://tera.research.ucf.edu" class="sys" target="_blank">TERA</a>
+						<a href="https://tera.research.ucf.edu" class="sys tera" target="_blank">TERA</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="https://yes.ucf.edu" class="sys" target="_blank">YES</a>
+						<a href="https://yes.ucf.edu" class="sys yes" target="_blank">YES</a>
 					</div>				
 				</div>
                 
@@ -89,45 +231,49 @@
 			<div class="ssosection">
 				<div class="sectionwrapper">			
 					<h1>PROD Web Services</h1>	
-
 					<div class="syslistslim">
-						<a href="https://myid.research.ucf.edu/WS/orc_sso.cfc?wsdl" class="sys" target="_blank">My ID Web Service</a>
+						<a href="https://argis.research.ucf.edu/webservices/sso.cfc?wsdl" class="sys argis webservice" target="_blank">ARGIS Web Service (CRATA)</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://argis.research.ucf.edu/webservices/sso.cfc?wsdl" class="sys" target="_blank">ARGIS Web Service</a>
+						<a href="https://ArgisAuthWS.research.ucf.edu/Auth_Component.cfc?wsdl" class="sys argis webservice" target="_blank">ARGIS Authen. Web Service for IRIS</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://tera.webdev1.research.ucf.edu/ws/WSUploadToTeraCab1.cfc?wsdl" class="sys" target="_blank">TERA Web Service</a>
+						<a href="https://reportsws.research.ucf.edu/ReportsService.asmx?wsdl" class="sys reports webservice" target="_blank">AURORA Web Service</a>
 					</div>	
 					<div class="syslistslim">
+						<a href="https://myid.research.ucf.edu/WS/orc_sso.cfc?wsdl" class="sys myid webservice" target="_blank">My ID Web Service for FAN</a>
+					</div>
+					<div class="syslistslim">
+						<a href="https://reportserver.research.ucf.edu/reportserver/ReportService2005.asmx?wsdl" class="sys reports webservice" target="_blank">Reporting Services Web Service</a>
+					</div>					
+					<div class="syslistslim">
+						<a href="https://tera.webdev1.research.ucf.edu/ws/WSUploadToTeraCab1.cfc?wsdl" class="sys tera webservice" target="_blank">TERA Web Service for MOVE</a>
+					</div>	
+					<!---<div class="syslistslim">
 						<a href="http://kivanc.research.ucf.edu/cfc_test/argis/Auth_Component.cfc?wsdl" class="sys" target="_blank">Kivanc's Web Service</a>
-					</div>			
-					<div class="syslistslim">
-						<a href="https://reportsws.research.ucf.edu/Service1.asmx?wsdl" class="sys" target="_blank">Reports Web Service</a>
-					</div>	
-					<div class="syslistslim">
-						<a href="https://reportserver.research.ucf.edu/reportserver/ReportService2005.asmx?wsdl" class="sys" target="_blank">Reporting Services Web Service</a>
-					</div>																					
+					</div>			--->
+
+																				
 				</div>
 			</div>	            
 <!--------------------------------------------------------------->	 			
 <!--------------------------------------------------------------->	            
 			<div class="ssosection">
 				<div class="sectionwrapper">			
-					<h1>Dashboards</h1>	
+					<h1>PROD Dashboards</h1>	
 
-					<div class="syslistslim">
-						<a href="http://pda.research.ucf.edu" class="sys" target="_blank">PDA</a>
+					<div>
+						<a href="http://pda.research.ucf.edu" class="sys pda" target="_blank">PDA</a>
 					</div>
-					<div class="syslistslim">
-						<a href="https://pda.research.ucf.edu/ReportPDF/Move_Dashboard.pdf" class="sys" target="_blank">MOVE Dashboard</a>
-					</div>
-					<div class="syslistslim">
-						<a href="http://pda.research.ucf.edu/CED.cfm" class="sys" target="_blank">CECS dashboard</a>
+					<div>
+						<a href="http://pda.research.ucf.edu/CED.cfm" class="sys cecs" target="_blank">CECS dashboard</a>
 					</div>	
-					<div class="syslistslim">
-						<a href="http://pda.research.ucf.edu/CED.cfm" class="sys" target="_blank">CED Dashboard</a>
-					</div>																							
+					<div>
+						<a href="http://pda.research.ucf.edu/CED.cfm" class="sys ced" target="_blank">CED Dashboard</a>
+					</div>
+					<div>
+						<a href="https://pda.research.ucf.edu/ReportPDF/Move_Dashboard.pdf" class="sys move" target="_blank">MOVE Dashboard</a>
+					</div>
 				</div>
 			</div>	            
 <!--------------------------------------------------------------->	                      
@@ -141,65 +287,65 @@
 					</div>--->
 
 					<div class="syslistslim">
-						<a href="https://apas.webdev1.research.ucf.edu" class="sys" target="_blank">APAS</a>
+						<a href="https://apas.webdev1.research.ucf.edu" class="sys apas" target="_blank">APAS</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://xargisucf.crata.ucf.edu" class="sys" target="_blank">ARGIS (third-party)</a>
+						<a href="https://xargisucf.crata.ucf.edu" class="sys argis crata ist" target="_blank">ARGIS (CRATA)</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://reportssso.webdev1.research.ucf.edu" class="sys" target="_blank">AURORA</a>
+						<a href="https://reportssso.webdev1.research.ucf.edu" class="sys aurora" target="_blank">AURORA</a>
 					</div>	
 					<div class="syslistslim">
-						<a href="https://bipreporting.webdev1.research.ucf.edu" class="sys" target="_blank">BIP Reporting</a>
+						<a href="https://bipreporting.webdev1.research.ucf.edu" class="sys bip" target="_blank">BIP Reporting</a>
 					</div>	                    				
 					<div class="syslistslim">
-						<a href="https://ers.webdev1.research.ucf.edu" class="sys" target="_blank">ERS</a>
+						<a href="https://ers.webdev1.research.ucf.edu" class="sys ers" target="_blank">ERS</a>
 					</div>	
 					<div class="syslistslim">
-						<a href="http://shafaq.ecrt-v42.research.ucf.edu/" class="sys" target="_blank">ECRT-Data</a>
+						<a href="http://shafaq.ecrt-v42.research.ucf.edu/" class="sys ecrtxml" target="_blank">ecrt XML Genie</a>
 					</div>	                    					
 					<div class="syslistslim">
 						<!---<a href="https://ecrt3dev.research.ucf.edu" class="sys" target="_blank">Ecrt v3.02 DEV (third-party)*</a>--->
-						<a href="http://ucfres13.research.ucf.edu/ecrt/initLogin.action" class="sys" target="_blank">Ecrt v3.02 (third-party)</a>
+						<a href="http://ucfres13.research.ucf.edu/ecrt/initLogin.action" class="sys ecrt" target="_blank">ecrt v3.02 (Huron)</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://ecrt4dev.research.ucf.edu/ecrt_dev" class="sys" target="_blank">Ecrt v4.5 (third-party)</a>
+						<a href="https://ecrt4dev.research.ucf.edu/ecrt_dev" class="sys ecrt 3rdparty" target="_blank">ecrt v4.5 (Huron)</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="https://angel.webdev1.research.ucf.edu" class="sys" target="_blank">FAN</a>
-					</div>					
+						<a href="https://angel.webdev1.research.ucf.edu" class="sys fan" target="_blank">FAN</a>
+					</div>
 					<div class="syslistslim">
-						<a href="https://move.webdev1.research.ucf.edu" class="sys" target="_blank">MOVE</a>
+						<a href="https://imedrisdev1.research.ucf.edu" class="sys iris 3rdparty" target="_blank">iRIS (iMedRIS)</a>
+					</div>	
+					<div class="syslistslim">
+						<a href="https://move.webdev1.research.ucf.edu" class="sys move" target="_blank">MOVE</a>
 					</div>                   
                     <div class="syslistslim">
-						<a href="https://faniq.webdev1.research.ucf.edu/" class="sys" target="_blank">FANIQ</a>
+						<a href="https://faniq.webdev1.research.ucf.edu/" class="sys faniq" target="_blank">FANIQ</a>
 					</div>                    			
 					<div class="syslistslim">
-						<a href="https://myid.webdev1.research.ucf.edu/" class="sys" target="_blank">My ID</a>
+						<a href="https://myid.webdev1.research.ucf.edu/" class="sys myid" target="_blank">My ID</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://parissso.webdev1.research.ucf.edu" class="sys" target="_blank">PARIS</a>
+						<a href="https://parissso.webdev1.research.ucf.edu" class="sys paris" target="_blank">PARIS</a>
 					</div>
 					<div class="syslistslim">
-						<a href="http://pda.webdev1.research.ucf.edu" class="sys" target="_blank">PDA</a>
+						<a href="http://pda.webdev1.research.ucf.edu" class="sys pda" target="_blank">PDA</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://projectlist.webdev1.research.ucf.edu" class="sys" target="_blank">Project List</a>
-					</div>					
-
+						<a href="https://projectlist.webdev1.research.ucf.edu" class="sys projectlist" target="_blank">Project List</a>
+					</div>
 					<div class="syslistslim">
-						<a href="https://reportsws.webdev1.research.ucf.edu/Service1.asmx" class="sys" target="_blank">Reports Web Service</a>
-					</div>				
-                    
+						<a href="https://reportsws.webdev1.research.ucf.edu/Service1.asmx" class="sys reports webservice" target="_blank">Reports Web Service</a>
+					</div>				                    
                     <div class="syslistslim">
-						<a href="https://super.webdev1.research.ucf.edu" class="sys" target="_blank">SuPeR</a>
-					</div>
-                    							
+						<a href="https://super.webdev1.research.ucf.edu" class="sys super" target="_blank">SuPeR</a>
+					</div>	
 					<div class="syslistslim">
-						<a href="https://tera.webdev1.research.ucf.edu" class="sys" target="_blank">TERA</a>
+						<a href="https://tera.webdev1.research.ucf.edu" class="sys tera" target="_blank">TERA</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://yes.webdev1.research.ucf.edu" class="sys" target="_blank">YES</a>
+						<a href="https://yes.webdev1.research.ucf.edu" class="sys yes" target="_blank">YES</a>
 					</div>					
 										
 				</div>
@@ -210,13 +356,13 @@
 										
 					<h1>TRAIN and TEST Systems</h1>
 					<div class="syslistslim">
-						<a href="https://apastrain.research.ucf.edu" class="sys" target="_blank">APAS Train</a>
+						<a href="https://apastrain.research.ucf.edu" class="sys apas" target="_blank">APAS Train</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://ecrt4test.research.ucf.edu/ecrt_test/initLogin.action" class="sys" target="_blank">ECRT v4.5 Test</a>
+						<a href="https://ecrt4test.research.ucf.edu/ecrt_test/initLogin.action" class="sys ecrt" target="_blank">ecrt v4.5 Test</a>
 					</div>	
 					<div class="syslistslim">
-						<a href="https://cmsdemo.webdev1.research.ucf.edu" class="sys" target="_blank">MOVE Demo</a>
+						<a href="https://cmsdemo.webdev1.research.ucf.edu" class="sys move" target="_blank">MOVE Demo</a>
 					</div>                     		
 				</div>
 			</div>		
@@ -227,16 +373,19 @@
 										
 					<h1>Other ORC sites with CFM functionality</h1>
 					<div class="syslistslim">
-						<a href="http://dictionary.research.ucf.edu" class="sys" target="_blank">Dictionary</a>
+						<a href="http://dictionary.research.ucf.edu" class="sys dictionary" target="_blank">Dictionary</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="http://contacts.research.ucf.edu/" class="sys" target="_blank">ORC Contacts App</a>
+						<a href="http://contacts.research.ucf.edu/" class="sys orccontacts" target="_blank">ORC Contacts App</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="http://www.research.ucf.edu/staff_directory.html" class="sys" target="_blank">ORC Contacts Page</a>
+						<a href="http://www.research.ucf.edu/staff_directory.html" class="sys orccontacts" target="_blank">ORC Contacts Page</a>
 					</div>		
 					<div class="syslistslim">
-						<a href="http://it.research.ucf.edu/improvingargis" class="sys" target="_blank">Improving ARGIS</a>
+						<a href="http://it.research.ucf.edu/improvingargis" class="sys argis" target="_blank">Improving ARGIS</a>
+					</div>			
+					<div class="syslistslim">
+						<a href="https://checkws.research.ucf.edu/checkws.cfm" class="sys checkws" target="_blank">Check Web Services</a>
 					</div>							
 				</div>
 			</div>				
@@ -244,60 +393,67 @@
 <!--------------------------------------------------------------->
 			<div class="ssosection">
 				<div class="sectionwrapper">				
-					<h1>Systems to be Archived</h1>
+					<h1>Systems to be Archived or already archived</h1>
 					<div class="syslistslim">
-						<a href="https://aplusurvey.research.ucf.edu" class="sys" target="_blank">APLU Survey (archived 3/20/2015)</a>
+						<a href="https://aplusurvey.research.ucf.edu" class="sys aplusurvey" target="_blank">APLU Survey (archived 3/20/2015)</a>
 					</div>
 					<div class="syslistslim">
-						<a href="http://managexmls.webdev1.research.ucf.edu" class="sys" target="_blank">Ecrt v3.0.2 Manage XMLs (this is old)</a>
+						<a href="http://managexmls.webdev1.research.ucf.edu" class="sys ecrtxml" target="_blank">ecrt XML Genie for version 3.02 (this is old, need to archive this)</a>
 					</div>                    
 					<div class="syslistslim">
-						<a href="https://ecrt.research.ucf.edu" class="sys" target="_blank">ECRT v3.02 (third-party) (not archived yet, for internal use only)</a>
+						<a href="https://ecrt.research.ucf.edu" class="sys ecrt" target="_blank">ecrt v3.02 (third-party) (not archived yet, for internal use only)</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://ers.research.ucf.edu" class="sys" target="_blank">ERS</a>
+						<a href="https://ers.research.ucf.edu" class="sys ers" target="_blank">ERS (archived)</a>
 					</div>
 					<div class="syslistslim">
-						<a href="https://gaa.research.ucf.edu" class="sys" target="_blank">GAA (offline as of 2/28/2013)</a>
+						<a href="https://gaa.research.ucf.edu" class="sys gaa" target="_blank">GAA (offline as of 2/28/2013)</a>
 					</div>			
 					<div class="syslistslim">
-						<a href="http://www.incubator.ucf.edu/events/index.html" class="sys" target="_blank">Incubator Calendar</a>
+						<a href="http://www.incubator.ucf.edu/events/index.html" class="sys incubator" target="_blank">Incubator Calendar (archived)</a>
 					</div>						
 					<div class="syslistslim">
-						<a href="http://incubatornetworkseminole.research.ucf.edu/" class="sys" target="_blank">Incubator Network Seminole (archived 2/28/2015)</a>
+						<a href="http://incubatornetworkseminole.research.ucf.edu/" class="sys incubator" target="_blank">Incubator Network Seminole (archived 2/28/2015)</a>
 					</div>						
 					<div class="syslistslim">
-						<a href="http://intelpro.research.ucf.edu" class="sys" target="_blank">IntelPro (archived 4/3/2015)</a>
+						<a href="http://intelpro.research.ucf.edu" class="sys intelpro" target="_blank">IntelPro (archived 4/3/2015)</a>
 					</div>						
 					<div class="syslistslim">
-						<a href="https://news.research.ucf.edu/" class="sys" target="_blank">News</a>
+						<a href="https://news.research.ucf.edu/" class="sys news" target="_blank">News</a>
 					</div>						
 					<div class="syslistslim">
-						<a href="http://nsfcareer.research.ucf.edu" class="sys" target="_blank">NSF CAREER(archived 4/3/2015)</a>
+					<div class="syslistslim">
+						<a href="http://nsfcareer.research.ucf.edu" class="sys nsf" target="_blank">NSF CAREER(archived 4/3/2015)</a>
 					</div>					
 					<div class="syslistslim">
-						<a href="https://parism.research.ucf.edu" class="sys" target="_blank">Paris Mobile*</a>
+						<a href="https://parism.research.ucf.edu" class="sys parismobile" target="_blank">Paris Mobile (never launched)</a>
 					</div>			
 					<div class="syslistslim">
-						<a href="https://sidtrec.research.ucf.edu" class="sys" target="_blank">SIDTrec (only DB is being used)</a>
-					</div>												
+						<a href="https://sidtrec.research.ucf.edu" class="sys sidtrec" target="_blank">SIDTrec (only DB is being used)</a>
+					</div>		
+					<div class="syslistslim">
+						<a href="http://kivanc.research.ucf.edu/cfc_test/argis/Auth_Component.cfc?wsdl" class="sys kivanc webservice" target="_blank">Kivanc's Web Service</a>
+					</div>
 				</div>
 			</div>
 <!--------------------------------------------------------------->	
-
 			<!-- Footer-->
 			<div class="footer">
 				<div class="sectionwrapper">
-					<ul>
-						<li><a href="http://www.ucf.edu"><img src="images/ldg_ucflogo.png"></a>
-						<li><a href="http://www.research.ucf.edu">Office of Research & Commercialization</a></li>
-						<li class="ribbon"><a href="http://it.research.ucf.edu" ><img src="images/ldg_ribbon.png"></a></li>
-					</ul>
+                     <ul>
+                            <li><a href="http://www.ucf.edu" target="_blank"><img src="/images/ldg_ucflogo.png"></a></li>
+                            <li><a href="http://www.research.ucf.edu" target="_blank">&copy; 2015 UCF Office of Research &amp; Commercialization</a></li>
+                            <li class="ribbon"><a href="http://it.research.ucf.edu" target="_blank"><h5 class="greycolor"><strong>Developed by Research Information Systems</strong></h5></a></li>
+                            <li class="ribbon">
+                                    <strong><img src="images/ldg_mail.png" width="20" height="12"/>&nbsp;<a href="mailto:risservicedesk@ucf.edu"><span class="greycolor">risservicedesk@ucf.edu</span></a></strong>
+                                    &nbsp;<span style="margin-top:5px;"><img src="images/ldg_phone.png" width="16" height="25"/>&nbsp; <span class="greycolor">407.823.5500</span></span>
+                            </li>
+                     </ul>
 				</div>
 				<!-- End section wrapper-->
 			</div>
 			<!-- End of footer-->
-	
 		</body>
 		<!-- End of body-->
 </html>
+
