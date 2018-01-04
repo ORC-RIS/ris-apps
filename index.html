@@ -4,12 +4,9 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-			<link rel="stylesheet" href="//header.research.ucf.edu/styles/bar.css">
             <link rel="stylesheet" href="styles/bootstrap-select.css">
             <link rel="stylesheet" href="styles/styles.css">
 
-			<link rel="stylesheet" type="text/css" href="https://header.dev.research.ucf.edu/ris-footer/styles/footer.css">
-			<link rel="stylesheet" type="text/css" href="https://header.dev.research.ucf.edu/ris-footer/styles/footer_mobile.css" media="screen and (max-device-width: 799px)">
 			<link href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat" rel="stylesheet" type="text/css">
 
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -272,7 +269,7 @@
                             </div>
                             </a>
 						</div>
-                        <!-- prais -->
+                        <!-- paris -->
                         <div class="sys paris research ucf">
                         	<p class="sysimg" >
                             	<a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
@@ -741,9 +738,20 @@
 		   <!-- End sso section-->
 
 			<!-- footer -->
-			<script type="text/javascript" src="https://header.dev.research.ucf.edu/ris-footer/js/get_footer.js"></script>
-			<script>
-				loadFooter();
+			<script type="text/javascript" id="header_location_id">
+				var header_location = "https://header.research.ucf.edu";
+				
+				if (window.location.href.includes("dev")) {
+					header_location = "https://header.dev.research.ucf.edu";
+				}
+				
+				var script = document.createElement('script');
+				script.onload = function(){
+					loadFooter();	
+				};
+
+				script.src = header_location+"/js/ris_footer.js";
+				document.getElementById("header_location_id").parentNode.appendChild(script);
 			</script>
 
 			<div id="ucf-orc-footer">
@@ -752,4 +760,3 @@
 		</body>
 		<!-- End of body-->
 </html>
-
