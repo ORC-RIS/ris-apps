@@ -7,15 +7,12 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-			<link rel="stylesheet" href="//header.dev.research.ucf.edu/styles/bar.css">
             <link rel="stylesheet" href="styles/bootstrap-select.css">
             <link rel="stylesheet" href="styles/styles.css">
             <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-			<link rel="stylesheet" href="styles/footer.css">
-			<link rel="stylesheet" type="text/css" href="styles/footer_mobile.css" media="screen and (max-device-width: 799px)">
+			<link href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat" rel="stylesheet" type="text/css">
 			<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat|Merriweather">
 
             <!-- <script type="text/javascript" src="https://universityheader.ucf.edu/bar/js/university-header.js?use-bootstrap-overrides=1" id='ucfhb-script'> </script> -->
 		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -433,21 +430,26 @@
 				</div>
 			</div>
 <!--------------------------------------------------------------->	
-			<!-- Footer-->
 		</div> <!-- end SSO div section above -->
 
-			<div class="pda-footer-main">
-			    <div class="sectionwrapper centered">
-			    	<ul id="no-bullets">
-			            <li class="pda-footer-serif hidden-xs hidden-sm"><a id="ucf-white" style="color: white;" href="http://www.research.ucf.edu" target="_blank">UCF Office of Research &amp; Commercialization</a></li>
-			            <li class="pda-footer-serif hidden-md hidden-lg"><a id="ucf-white" style="color: white;" href="http://www.research.ucf.edu" target="_blank">UCF Office of Research &amp; Commercialization</a></li>
-			            <li class="ribbon"><a id="ucf-white" href="http://it.research.ucf.edu" target="_blank"><h5 class="pda-footer-sans-serif">Developed by Research Information Systems</h5></a></li>
-			            <li class="ribbon pda-footer-icons">
-			                <img src="images/ldg_mail.png" width="20" height="12"/>&nbsp;<a id="ucf-white" href="mailto:risservicedesk@ucf.edu">risservicedesk@ucf.edu</a>&nbsp;
-			                <span style="margin-top:5px;"><img src="images/ldg_phone.png" width="16" height="25"/>&nbsp; 407.823.5500</span>
-			            </li>
-			        </ul>
-			    </div>
+			<!-- footer -->
+			<script type="text/javascript" id="header_location_id">
+				var header_location = "https://header.research.ucf.edu";
+				
+				if (window.location.href.includes("dev")) {
+					header_location = "https://header.dev.research.ucf.edu";
+				}
+				
+				var script = document.createElement('script');
+				script.onload = function(){
+					loadFooter();	
+				};
+
+				script.src = header_location+"/js/ris_footer.js";
+				document.getElementById("header_location_id").parentNode.appendChild(script);
+			</script>
+
+			<div id="ucf-orc-footer">
 			</div>
 			<!-- End of footer-->
 		</body>
