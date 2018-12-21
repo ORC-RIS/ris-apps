@@ -109,7 +109,6 @@
 
 					}
 				}
-
            </script>
            <div class="panel-default">
            </div>
@@ -227,48 +226,152 @@
                           </select>
                     </div>						
 -->					
+<!---
 					<div class=""  id="filter" style="radiodiv">
                         <div class="container">
                           <form role="form">
                             <div class="radio">
                               <span style="padding:5px; display:inline-block;">
-                                  <input type="radio" name="optradio" id="optradio_all" onclick="selectSystems('optradio_all')" class="css-checkbox" checked><label for="optradio_all" class="css-label radGroup1"  style="float:left;width:150px;margin:5px;">All Systems</label><!--- All --->
+                                  <input type="radio" name="optradio" id="optradio_all" onclick="selectSystems('optradio_all')" class="css-checkbox" checked><label for="optradio_all" class="css-label radGroup1"  style="float:left;width:150px;margin:5px;">All Systems</label>
                               </span>
                               <span style="padding:5px; display:inline-block;">
-                                  <input type="radio" name="optradio" id="optradio_ucf" onclick="selectSystems('optradio_ucf')" class="css-checkbox"><label for="optradio_ucf" class="css-label radGroup1" style="float:left;width:150px;margin:5px;">Enterprise</label><!--- UCF --->
+                                  <input type="radio" name="optradio" id="optradio_ucf" onclick="selectSystems('optradio_ucf')" class="css-checkbox"><label for="optradio_ucf" class="css-label radGroup1" style="float:left;width:150px;margin:5px;">Enterprise</label>
                               </span>
                               <span style="padding:5px; display:inline-block;">
-                                  <input type="radio" name="optradio" id="optradio_departmental" onclick="selectSystems('optradio_departmental')" class="css-checkbox"><label for="optradio_departmental" class="css-label radGroup1" style="float:left;width:150px;margin:5px;">Departmental</label><!--- Departmental --->
+                                  <input type="radio" name="optradio" id="optradio_departmental" onclick="selectSystems('optradio_departmental')" class="css-checkbox"><label for="optradio_departmental" class="css-label radGroup1" style="float:left;width:150px;margin:5px;">Departmental</label>
                               </span>
                             </div>
                           </form>
                         </div>
                     </div>	
-                    
+--->                    
                     <!---<h1>Single Sign-On Systems</h1>--->
 
-					<!--SSO systems-->
+                    <!--SSO systems-->
+                    
+                    <h1 style="font-size:22px">Huron Research Suite</h1>
 					<div class="syslist">
-						<!--ARGIS tile-->
-						<div class="sys argis research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
-                            	<img src="images/ldg_argis.png" alt="myresearch">
+                        <!--- Huron IRB -->
+                        <div class="sys hrsirb research ucf" >
+                            <p class="sysimg" >
+                                <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
+                                <img src="images/Huron_logo.png" alt="myresearch">
                                 </a>
                             </p>
-                            <a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.argis .sysimg').hide();" onMouseOut="$('.argis .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Manage research and IP from proposal to commercialization
+                            <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.hrsirb .sysimg').hide();" onMouseOut="$('.hrsirb .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Huron IRB: Institutional Review Board Submission and Approval
                                 </p>
                                 <p class="expandtext"> 
-                                	<span class="expandtexthead">Academic Research & Grants Information System</span><br>
-									ARGIS is a web-based enterprise system which provides users direct access to the information needed for managing funded research. The system tracks proposals, funding, licenses, and other agreements. The system also allows users to report and document hazards and conflicts of interest that impact compliance requirements.                                    
+                                    <span class="expandtexthead">Huron IRB</span><br>
+                                    Huron IRB facilitates high-quality, compliant reviews for research studies involving human subjects. The application combines compliant IRB operating practices from the HRPP Toolkit with human research protection best practices.                               
                                 </p>
                             </div>
                             </a>
-						</div>
-                        <!-- paris -->
+                        </div>
+                        <!--- Huron IACUC -->
+                        <div class="sys hrsiacuc research ucf" style="background-color:#f3f3f3; line-height:1.25em;">
+                            <p class="sysimg" >
+                                <img src="images/Huron_logo.png" alt="myresearch">
+                            </p>
+                            <div class="systext" style="clear: both" onMouseOver="$('.hrsiacuc .sysimg').hide();" onMouseOut="$('.hrsiacuc .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Huron IACUC <!--: Institutional Animal Care and Use Committee Submission and Approval--> <span style="color:blue;">(Coming in Fall 2019)</span>
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Huron IACUC</span><br>
+                                    Huron IACUC facilitates high-quality, compliant reviews for research studies involving the care or use of animals. The system provides access to species, procedures, substances, training information and inspections to facilitate the submission and review process.                                  
+                                </p>
+                            </div>
+                        </div>
+                        <!--- Huron COI -->
+                        <div class="sys hrscoi research ucf" style="background-color:#f3f3f3; line-height:1.25em;">
+                            <p class="sysimg" >
+                                <img src="images/Huron_logo.png" alt="myresearch">
+                            </p>
+                            <div class="systext" style="clear: both" onMouseOver="$('.hrscoi .sysimg').hide();" onMouseOut="$('.hrscoi .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Huron COI<!--: Disclose and Manage Interest--> <span style="color:blue;">(Coming in Fall 2019)</span>                                
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Huron COI</span><br>
+                                    Huron COI streamlines the disclosure process for potential conflicts of interest. The system integrates annual disclosure data with related research certifications to ensure transparency and track compliance.                                
+                                </p>
+                            </div>
+                        </div>        
+                        <!--- Huron Grants -->
+                        <div class="sys hrsgrants research ucf" style="background-color:#f3f3f3; line-height:1.25em;">
+                            <p class="sysimg" >
+                                <img src="images/Huron_logo.png" alt="myresearch">
+                            </p>
+                            <div class="systext" style="clear: both" onMouseOver="$('.hrsgrants .sysimg').hide();" onMouseOut="$('.hrsgrants .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Huron Grants<!--: Manage Proposals and Awards --> <span style="color:blue;">(Coming in Fall 2019)</span>
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Huron Grants</span><br>
+                                    Huron Grants is a comprehensive solution for proposal submission and award management. The system ensures successful proposal creation and budget development, electronic submission to grants.gov, and post-award management capabilities include award setup, modification entry, and budget reconciliation to enter and track sponsor approved budgets.                            
+                                </p>
+                            </div>
+                        </div>
+                        <!--- Huron Agreements -->
+                        <div class="sys hrsagreements research ucf" style="background-color:#f3f3f3; line-height:1.25em;">
+                            <p class="sysimg" >
+                                <img src="images/Huron_logo.png" alt="myresearch">
+                            </p>
+                             <div class="systext" style="clear: both" onMouseOver="$('.hrsagreements .sysimg').hide();" onMouseOut="$('.hrsagreements .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Huron Agreements<!--: Manage Research Agreements --> <span style="color:blue;">(Coming in Fall 2019)</span>
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Huron Agreements</span><br>
+                                    Huron Agreement provides management of financial and non-financial research agreements.                                     
+                                </p>
+                            </div>
+                         </div>
+                        <!--- ECRT -->
+                        <div class="sys ecrt research ucf">
+                            <p class="sysimg" >
+                                <a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank">
+                                <img src="images/ldg_ecrt.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.ecrt .sysimg').hide();" onMouseOut="$('.ecrt .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Effort reporting & certification
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Effort Reporting and Certification</span><br>
+                                    This enterprise web system facilitates UCF's effort reporting and certification process in compliance with UCF's effort reporting policies, federal policy OMB Circular A-21 section J.10., NIH Salary Limitation on Grants, and other policies that govern the need to provide certification of an individual's sponsored or non-sponsored effort.                                    
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h1 style="font-size:22px">Reporting Tools</h1>
+                    <div class="syslist">
+                        <!--- Aurora -->
+                        <div class="sys aurora research ucf">
+                            <p class="sysimg" >
+                                <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
+                                <img src="images/ldg_aurora.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.aurora .sysimg').hide();" onMouseOut="$('.aurora .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Run research reports for UCF 
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">A University Resources Online Reporting Appilcation</span><br>
+                                    AURORA is an enterprise web system which provides on-demand or subscription-based reports on funded research activity at UCF.  Users can view reports on expenditures, new funding, and current burn rates among other reports, many of which are available at both aggregate and detailed levels.                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!-- Paris -->
                         <div class="sys paris research ucf">
                         	<p class="sysimg" >
                             	<a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
@@ -287,46 +390,322 @@
                                 </p>
                             </div>
                             </a>
-						</div>
-
-						<div class="sys aurora research ucf">
+                        </div>
+                        <!--- PDA -->
+                        <div class="sys pda research ucf">
                         	<p class="sysimg" >
-                            	<a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
-                            	<img src="images/ldg_aurora.png" alt="myresearch">
+                            	<a href="https://pda.research.ucf.edu/" target="_blank">
+                            	<img src="images/ldg_pda.png" height="135" width="135" alt="myresearch">
                                 </a>
                             </p>
-                            <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.aurora .sysimg').hide();" onMouseOut="$('.aurora .sysimg').show();"> 
+                            <a href="https://pda.research.ucf.edu/" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.pda .sysimg').hide();" onMouseOut="$('.pda .sysimg').show();"> 
                             	<p class="normaltext">
-	                            	Run research reports for UCF 
+	                            	Research Dashboard
                                 </p>
                                 <p class="expandtext"> 
-                                	<span class="expandtexthead">A University Resources Online Reporting Appilcation</span><br>
-									AURORA is an enterprise web system which provides on-demand or subscription-based reports on funded research activity at UCF.  Users can view reports on expenditures, new funding, and current burn rates among other reports, many of which are available at both aggregate and detailed levels.                                </p>
-                            </div>
-                            </a>
-						</div>
-						
-						<div class="sys infoready research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://ucf.infoready4.com/" target="_blank">
-                            	<img src="images/ldg_infoready.png" height="113" width="214" alt="pivot">
-                                </a>
-                            </p>
-                            <a href="https://ucf.infoready4.com/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.infoready .sysimg').hide();" onMouseOut="$('.infoready .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Limited Submissions and Internal Programs Submission portal
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">InfoReady</span><br>
-									UCF InfoReady is a support software to apply to limited submissions and internal programs. It can be easily accessed via single sign-on and features a user-friendly homepage that lists all active opportunities and provides a convenient submission deadline calendar.
+                                	<span class="expandtexthead">Research Dashboard</span><br>
+									The research dashboard shows key metrics about UCF in regards to research awards, expenditures, patents and other research activities.  Also, the research dashboard provides a percentage comparison for each metric allowing the user to quickly see how a particular area is operating to the previous fiscal year.                                 
 								</p>
                             </div>
                             </a>
 						</div>
+                        <!--- Data Cubes -->
+                        <div class="sys datacubes research departmental">
+                        	<p class="sysimg" >
+                            	<a href="cubes.html" >
+                            	<img src="images/ldg_datacubes.png" height="135" width="135" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="cubes.html">
+                            <div class="systext" style="clear: both" onMouseOver="$('.datacubes .sysimg').hide();" onMouseOut="$('.datacubes .sysimg').show();"> 
+                            	<p class="normaltext">
+	                            	View dimensions and measures to analyze data related to research
+                                </p>
+                                <p class="expandtext"> 
+                                	<span class="expandtexthead">Data Cubes</span><br>
+									The cubes will allow the users to analyze aggregated data via dimensions (fields) and measures (counts, sums, etc.) in an excel pivot table.  The users will have the freedom to slice, filter and arrange the data for their respective reporting needs or business decisions.  Finally, the data within the cubes are refreshed on a daily schedule.
+								</p>
+                            </div>
+                            </a>
+						</div>
+                    </div>
 
-						<!-- 
+                    <h1 style="font-size:22px">Research Development & Training</h1>
+                    <div class="syslist">
+                        <!--- Pivot -->
+                        <div class="sys pivot research ucf">
+                        	<p class="sysimg" >
+                            	<a href="https://pivot.cos.com/" target="_blank">
+                            	<img src="images/ldg_pivot.png" height="113" width="214" alt="pivot">
+                                </a>
+                            </p>
+                            <a href="https://pivot.cos.com/" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.pivot .sysimg').hide();" onMouseOut="$('.pivot .sysimg').show();"> 
+                            	<p class="normaltext">
+	                            	Discover global funding opportunities
+                                </p>
+                                <p class="expandtext"> 
+                                	<span class="expandtexthead">Pivot</span><br>
+									ProQuest Pivot (R) is a comprehensive database for finding funding opportunities from International, Federal, State and Private sponsors, uniquely matched to researchers' expertise. Researchers can save searches and receive weekly updates of new matched opportunities.
+								</p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- InfoReady -->
+                        <div class="sys infoready research ucf">
+                            <p class="sysimg" >
+                                <a href="https://ucf.infoready4.com/" target="_blank">
+                                <img src="images/ldg_infoready.png" height="113" width="214" alt="pivot">
+                                </a>
+                            </p>
+                            <a href="https://ucf.infoready4.com/" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.infoready .sysimg').hide();" onMouseOut="$('.infoready .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Limited Submissions and Internal Programs Submission portal
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">InfoReady</span><br>
+                                    UCF InfoReady is a support software to apply to limited submissions and internal programs. It can be easily accessed via single sign-on and features a user-friendly homepage that lists all active opportunities and provides a convenient submission deadline calendar.
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- Citi -->
+                        <div class="sys citi research ucf">
+                            <p class="sysimg" >
+                                <a href="http://citi.research.ucf.edu" target="_blank">
+                                <img src="images/ldg_citi.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="http://citi.research.ucf.edu" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.citi .sysimg').hide();" onMouseOut="$('.citi .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Collaborative Institutional Training Initiative
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Collaborative Institutional Training Initiative</span><br>
+                                    The CITI Program at the University of Miami provides web-based training materials to serve millions of learners at academic institutions, government agencies, and commercial organizations in the U.S. and around the world. CITI provides educational training content that promotes the quality of and public trust in the research enterprise.                                    
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <h1 style="font-size:22px">Contract and Document Management</h1>   
+                    <div class="syslist">
+                        <!--- Move -->
+                        <div class="sys move research departmental">
+                            <p class="sysimg" >
+                                <a href="https://move.research.ucf.edu/managecontract.cfm" target="_blank">
+                                <img src="images/ldg_move.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://move.research.ucf.edu/managecontract.cfm" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.move .sysimg').hide();" onMouseOut="$('.move .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Manage research and IP from proposal to commercialization
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">My Online reView of E-Docs</span><br>
+                                    MOVE is a web system for submission of research or other contracts for legal review by Office of General Counsel. Contracts can also be sent to ad-hoc reviewers before review by OGC. The system provides a template library with pre-approved clauses/templates for contracts.                                     
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- CobbleStone -->
+                        <div class="sys cobblestone research ucf">
+                            <p class="sysimg" >
+                                <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
+                                <img src="images/ldg_CobbleStone.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.cobblestone .sysimg').hide();" onMouseOut="$('.cobblestone .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Manage and review contracts submitted to Office of General Counsel
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">CobbleStone Systems</span><br>
+                                    CobbleStone is a cloud software solution that allows any university employee to submit a contract that requires legal review from one of the four legal offices. The system allows the legal office to gather internal approvals and secure signatures to execute agreements and allows the submitter to monitor their contract's progression during the review lifecycle.                                 
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- Tera -->
+                        <div class="sys tera research departmental">
+                            <p class="sysimg" >
+                                <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
+                                <img src="images/ldg_tera.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.tera .sysimg').hide();" onMouseOut="$('.tera .sysimg').show();"> 
+                                <p class="normaltext">
+                                    ORC repository for research-related documents
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">The Electronic Research Archive</span><br>
+                                    TERA is a web system provides a digital repository for electronic documents that pertain to sponsored research projects or Research Foundation. The TERA documents for a research project can be accessed by the researchers and research administrators in PARIS.                                    
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <h1 style="font-size:22px">Other Research Administration</h1>   
+                    <div class="syslist">
+						<!-- Argis -->
+						<div class="sys argis research ucf">
+                        	<p class="sysimg" >
+                            	<a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
+                            	<img src="images/ldg_argis.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.argis .sysimg').hide();" onMouseOut="$('.argis .sysimg').show();"> 
+                            	<p class="normaltext">
+	                            	Manage research and IP from proposal to commercialization
+                                </p>
+                                <p class="expandtext"> 
+                                	<span class="expandtexthead">Academic Research & Grants Information System</span><br>
+									ARGIS is a web-based enterprise system which provides users direct access to the information needed for managing funded research. The system tracks proposals, funding, licenses, and other agreements. The system also allows users to report and document hazards and conflicts of interest that impact compliance requirements.                                    
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- IRIS -->
+                        <div class="sys iris research ucf">
+                            <p class="sysimg" >
+                                <a href="https://iris.research.ucf.edu" target="_blank">
+                                <img src="images/ldg_iris.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://iris.research.ucf.edu" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.iris .sysimg').hide();" onMouseOut="$('.iris .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Institutional Review Board submission and approval
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Integrated Research Information Systems</span><br>
+                                    The iRIS enterprise system facilitates Institution Review Board management with streamlined workflows for managing the submission, monitoring, renewal, and termination of research involving human subjects.                                     
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- BIP -->
+                        <div class="sys bip comm research departmental">
+                            <p class="sysimg" >
+                                <a href="https://bipreports.research.ucf.edu/sites.cfm" target="_blank">
+                                <img src="images/ldg_bip.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://bipreports.research.ucf.edu/sites.cfm" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.bip .sysimg').hide();" onMouseOut="$('.bip .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Track data for Business Incubator Program sites and clients
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Business Incubation Program Reporting</span><br>
+                                    This web-system tracks site-level and company-level data for monthly, quarterly and annual BIP reporting. Information tracked includes site affiliation, client type and status, DUNS and EIN number, entry and exit date, CEO/founder contact information, headcount, grants awarded, angel investment, revenue, award funding, milestones, and notes.                                    
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- Sales Force -->
+                        <div class="sys salesforce research departmental">
+                            <p class="sysimg" >
+                                <a href="https://login.salesforce.com" target="_blank">
+                                <img src="images/ldg_salesforce.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://login.salesforce.com" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.salesforce .sysimg').hide();" onMouseOut="$('.salesforce .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Customer Relationship Management for GrowFL, BIP and TTO
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Salesforce</span><br>
+                                    Enterprise Customer Relationship Management system to handle the commercialization and entrepreneur lifecycle for GrowFL, BIP, and Technology Transfer clients.									
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                        <!--- EFACS -->
+                        <div class="sys efacs research departmental" style="background-color:#f3f3f3; line-height:1.25em;">
+                            <p class="sysimg">
+                                <img src="images/ldg_efacs.png" alt="myresearch" class="disabled">
+                            </p>
+                            <div class="systext" style="clear: both; background-color:#e9e9e9;" onMouseOver="$('.efacs .sysimg').hide();" onMouseOut="$('.efacs .sysimg').show();"> 
+                                <p class="normaltext">
+                                    eFacilities and Administrative Cost System
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">eFacilities and Administrative Cost System</span><br>
+                                    Huron's efacs&#174; system provides a flexible web-based cost system for the calculation and negotiation of the facilities and administrative (F&A) rates. The data models available and created within efacs are used by UCF sponsored research to determine the appropriate F&A rate to be applied on all university research facilities.
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <!--- Conflict of Interest -->
+                        <div class="sys coi research ucf original">
+                            <p class="sysimg" >
+                                <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+                                <img src="images/ldg_coi.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
+                            <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Disclose and review potential conflicts of interest
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
+                                    The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                </p>
+                            </div>
+                            </a> 
+                        </div>
+
+                        <!-- To Arrange the order -->
+                        <div class="sys coi research ucf order">
+                            <p class="sysimg" >
+                                <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+                                <img src="images/ldg_coi.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
+                                <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
+                                    <p class="normaltext">
+                                        Disclose and review potential conflicts of interest
+                                    </p>
+                                    <p class="expandtext"> 
+                                        <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
+                                        The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                    </p>
+                                </div>
+                            </a> 
+                        </div>
+                        <div class="sys lsfo research ucf order">
+                            <p class="sysimg" >
+                                <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
+                                <img src="images/ldg_ip.png" alt="myresearch">
+                                </a>
+                            </p>
+                            <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
+                            <div class="systext" style="clear: both" onMouseOver="$('.lsfo .sysimg').hide();" onMouseOut="$('.lsfo .sysimg').show();"> 
+                                <p class="normaltext">
+                                    Find opportunities; submit and review white papers
+                                </p>
+                                <p class="expandtext"> 
+                                    <span class="expandtexthead">Internal Opportunities</span><br>
+                                    The Internal Opportunities site includes information about Limited Submission opportunities from federal, state, and private programs, and UCF Internal Programs (seed funds, matched funds) facilitated through the Office of Research & Commercialization (ORC).                                     
+                                </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+<!-- 
 						<div class="sys lsfo research ucf original">
                         	<p class="sysimg" >
                             	<a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
@@ -344,199 +723,8 @@
                             </div>
                             </a>
 						</div>
-						-->
-						<div class="sys coi research ucf original">
-                        	<p class="sysimg" >
-                            	<a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
-                            	<img src="images/ldg_coi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
-                            <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Disclose and review potential conflicts of interest
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
-									The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                </p>
-                            </div>
-                            </a> 
-						</div>
-
-						<div class="sys move research departmental">
-                        	<p class="sysimg" >
-                            	<a href="https://move.research.ucf.edu/managecontract.cfm" target="_blank">
-                            	<img src="images/ldg_move.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://move.research.ucf.edu/managecontract.cfm" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.move .sysimg').hide();" onMouseOut="$('.move .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Manage research and IP from proposal to commercialization
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">My Online reView of E-Docs</span><br>
-									MOVE is a web system for submission of research or other contracts for legal review by Office of General Counsel. Contracts can also be sent to ad-hoc reviewers before review by OGC. The system provides a template library with pre-approved clauses/templates for contracts.                                     
-                                </p>
-                            </div>
-                            </a>
-						</div>
-
-						<div class="sys tera research departmental">
-                        	<p class="sysimg" >
-                            	<a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
-                            	<img src="images/ldg_tera.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.tera .sysimg').hide();" onMouseOut="$('.tera .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	ORC repository for research-related documents
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">The Electronic Research Archive</span><br>
-									TERA is a web system provides a digital repository for electronic documents that pertain to sponsored research projects or Research Foundation. The TERA documents for a research project can be accessed by the researchers and research administrators in PARIS.                                    
-                                </p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys ecrt research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank">
-                            	<img src="images/ldg_ecrt.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ecrt4.research.ucf.edu/ecrt/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.ecrt .sysimg').hide();" onMouseOut="$('.ecrt .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Effort reporting & certification
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Effort Reporting and Certification</span><br>
-									This enterprise web system facilitates UCF's effort reporting and certification process in compliance with UCF's effort reporting policies, federal policy OMB Circular A-21 section J.10., NIH Salary Limitation on Grants, and other policies that govern the need to provide certification of an individual's sponsored or non-sponsored effort.                                    
-                                </p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys bip comm research departmental">
-                        	<p class="sysimg" >
-                            	<a href="https://bipreports.research.ucf.edu/sites.cfm" target="_blank">
-                            	<img src="images/ldg_bip.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://bipreports.research.ucf.edu/sites.cfm" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.bip .sysimg').hide();" onMouseOut="$('.bip .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Track data for Business Incubator Program sites and clients
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Business Incubation Program Reporting</span><br>
-									This web-system tracks site-level and company-level data for monthly, quarterly and annual BIP reporting. Information tracked includes site affiliation, client type and status, DUNS and EIN number, entry and exit date, CEO/founder contact information, headcount, grants awarded, angel investment, revenue, award funding, milestones, and notes.                                    
-                                </p>
-                            </div>
-                            </a>
-						</div>
-                        
-                         <div class="sys iris research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://iris.research.ucf.edu" target="_blank">
-                            	<img src="images/ldg_iris.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://iris.research.ucf.edu" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.iris .sysimg').hide();" onMouseOut="$('.iris .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Institutional Review Board submission and approval
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Integrated Research Information Systems</span><br>
-									The iRIS enterprise system facilitates Institution Review Board management with streamlined workflows for managing the submission, monitoring, renewal, and termination of research involving human subjects.                                     
-                                </p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys citi research ucf">
-                        	<p class="sysimg" >
-                            	<a href="http://citi.research.ucf.edu" target="_blank">
-                            	<img src="images/ldg_citi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="http://citi.research.ucf.edu" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.citi .sysimg').hide();" onMouseOut="$('.citi .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Collaborative Institutional Training Initiative
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Collaborative Institutional Training Initiative</span><br>
-									The CITI Program at the University of Miami provides web-based training materials to serve millions of learners at academic institutions, government agencies, and commercial organizations in the U.S. and around the world. CITI provides educational training content that promotes the quality of and public trust in the research enterprise.                                    
-                                </p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <!-- To Arrange the order -->
-                        <div class="sys lsfo research ucf order">
-                        	<p class="sysimg" >
-                            	<a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
-                            	<img src="images/ldg_ip.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.lsfo .sysimg').hide();" onMouseOut="$('.lsfo .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Find opportunities; submit and review white papers
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Internal Opportunities</span><br>
-									The Internal Opportunities site includes information about Limited Submission opportunities from federal, state, and private programs, and UCF Internal Programs (seed funds, matched funds) facilitated through the Office of Research & Commercialization (ORC).                                     
-                                </p>
-                            </div>
-                            </a>
-						</div>
-
-						<div class="sys coi research ucf order">
-                        
-                        	<p class="sysimg" >
-                            	<a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
-                            	<img src="images/ldg_coi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
-                                <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Disclose and review potential conflicts of interest
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
-										The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                    </p>
-                                </div>
-                            </a> 
-						</div>
-                        <!-- To Arrange the order End -->
-
-                        
-                        <div class="sys salesforce research departmental">
-                        	<p class="sysimg" >
-                            	<a href="https://login.salesforce.com" target="_blank">
-                            	<img src="images/ldg_salesforce.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://login.salesforce.com" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.salesforce .sysimg').hide();" onMouseOut="$('.salesforce .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Customer Relationship Management for GrowFL, BIP and TTO
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Salesforce</span><br>
-									Enterprise Customer Relationship Management system to handle the commercialization and entrepreneur lifecycle for GrowFL, BIP, and Technology Transfer clients.									
-                                </p>
-                            </div>
-                            </a>
-						</div>
-						<!---
+-->
+<!---
                         <div class="sys fan research departmental">
                         	<p class="sysimg" >
                             	<a href="https://angelnetwork.research.ucf.edu" target="_blank">
@@ -591,9 +779,10 @@
 										UCF scholars in the STEM (Science, Technology, Engineering, and Mathematics) disciplines can apply online to the Young Entrepreneur & Scholar scholarship program. Selected candidates get scholarships and internship/entrepreneurship opportunity to work under the guidance of mentors.                                    </p>
                                 </div>
                             </a>
-					   </div>
-                       --->
-<!--                        <div class="sys datapro research departmental">
+                       </div>
+--->
+<!--                        
+                        <div class="sys datapro research departmental">
                         	<p class="sysimg" >
                             	<img id="imgdatapro" src="images/ldg_datapro.png" alt="myresearch">
                             </p>
@@ -608,29 +797,10 @@
                                 </p>
                             </div>
                             </a>
-					   </div> -->
-
-                       <div class="sys efacs research departmental" style="background-color:#f3f3f3; line-height:1.25em;">
-                        	<p class="sysimg">
-                            	<!-- <a href="http://efacs.research.ucf.edu" target="_blank"> -->
-                            	<img src="images/ldg_efacs.png" alt="myresearch" class="disabled">
-                                <!-- </a> -->
-                            </p>
-                            <!-- <a href="http://efacs.research.ucf.edu" target="_blank"> -->
-                            <div class="systext" style="clear: both; background-color:#e9e9e9;" onMouseOver="$('.efacs .sysimg').hide();" onMouseOut="$('.efacs .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	eFacilities and Administrative Cost System
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">eFacilities and Administrative Cost System</span><br>
-									Huron's efacs&#174; system provides a flexible web-based cost system for the calculation and negotiation of the facilities and administrative (F&A) rates. The data models available and created within efacs are used by UCF sponsored research to determine the appropriate F&A rate to be applied on all university research facilities.
-                                    
-                                </p>
-                            </div>
-                            <!-- </a> -->
-					   </div>
-                       
-<!--                       <div class="sys ga research departmental">
+                       </div> 
+-->
+<!--                       
+                        <div class="sys ga research departmental">
                         	<p class="sysimg" >
                             	<a href="https://www.google.com/analytics" target="_blank">
                             	<img src="images/ldg_ga1.png" alt="myresearch">
@@ -648,86 +818,7 @@
                             </div>
 					   </div>
 
--->
-                        <div class="sys cobblestone research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://ucf.cobblestonesystems.com/core" target="_blank">
-                            	<img src="images/ldg_CobbleStone.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.cobblestone .sysimg').hide();" onMouseOut="$('.cobblestone .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Manage and review contracts submitted to Office of General Counsel
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">CobbleStone Systems</span><br>
-									CobbleStone is a cloud software solution that allows any university employee to submit a contract that requires legal review from one of the four legal offices. The system allows the legal office to gather internal approvals and secure signatures to execute agreements and allows the submitter to monitor their contract's progression during the review lifecycle.                                 
-								</p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys pda research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://pda.research.ucf.edu/" target="_blank">
-                            	<img src="images/ldg_pda.png" height="135" width="135" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://pda.research.ucf.edu/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.pda .sysimg').hide();" onMouseOut="$('.pda .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Research Dashboard
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Research Dashboard</span><br>
-									The research dashboard shows key metrics about UCF in regards to research awards, expenditures, patents and other research activities.  Also, the research dashboard provides a percentage comparison for each metric allowing the user to quickly see how a particular area is operating to the previous fiscal year.                                 
-								</p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys datacubes research departmental">
-                        	<p class="sysimg" >
-                            	<a href="cubes.html" >
-                            	<img src="images/ldg_datacubes.png" height="135" width="135" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="cubes.html">
-                            <div class="systext" style="clear: both" onMouseOver="$('.datacubes .sysimg').hide();" onMouseOut="$('.datacubes .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	View dimensions and measures to analyze data related to research
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Data Cubes</span><br>
-									The cubes will allow the users to analyze aggregated data via dimensions (fields) and measures (counts, sums, etc.) in an excel pivot table.  The users will have the freedom to slice, filter and arrange the data for their respective reporting needs or business decisions.  Finally, the data within the cubes are refreshed on a daily schedule.
-								</p>
-                            </div>
-                            </a>
-						</div>
-                        
-                        <div class="sys pivot research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://pivot.cos.com/" target="_blank">
-                            	<img src="images/ldg_pivot.png" height="113" width="214" alt="pivot">
-                                </a>
-                            </p>
-                            <a href="https://pivot.cos.com/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.pivot .sysimg').hide();" onMouseOut="$('.pivot .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Discover global funding opportunities
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Pivot</span><br>
-									ProQuest Pivot (R) is a comprehensive database for finding funding opportunities from International, Federal, State and Private sponsors, uniquely matched to researchers' expertise. Researchers can save searches and receive weekly updates of new matched opportunities.
-								</p>
-                            </div>
-                            </a>
-						</div>
-                        
-                  	</div>
-					<!-- End syslist-->
-					
+-->					
 				</div>
 				<!-- End section wrapper-->
 			</div>
