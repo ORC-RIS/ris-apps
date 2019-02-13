@@ -566,6 +566,10 @@ body{
 	font-size: 1em;
 	}
 	
+.mobile-hide { 
+	display: none; 
+	}
+
 }
 
 /************ Phones and small tablets ****************/
@@ -631,6 +635,10 @@ h1 {
 .sys {
 	margin-top: 0;
 	min-height: 0px;
+	}
+
+.mobile-hide { 
+	display: none; 
 	}
 
 #imgsuper{
