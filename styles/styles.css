@@ -569,7 +569,9 @@ body{
 .mobile-hide { 
 	display: none; 
 	}
-
+.ithenticateImg {
+	margin-top: 0 !important;
+}
 }
 
 /************ Phones and small tablets ****************/
@@ -679,7 +681,9 @@ h1 {
 .formdiv {
 	width: 100%;
 	}
-	
+	.ithenticateImg {
+		margin-top: 0% !important;
+	}
 }
 .boldText{
 	font-weight:bold;
@@ -834,3 +838,10 @@ input[type=radio].css-checkbox:checked + label.css-label {background-position: 0
 label.css-label {background-image:url(/images/cssradio.png);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;
 -ms-user-select: none;user-select: none;}
 /* Radio Buttons */  
+
+
+/* iThenticate Image Styling */
+.ssosection img.ithenticateImg {
+	width: 100%;
+	margin-top: 10%;
+}
