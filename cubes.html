@@ -177,7 +177,7 @@
         <script type="text/javascript" id="header_location_id">
             var header_location = "https://header.research.ucf.edu";
             
-            if (window.location.href.includes("dev")) {
+            if (window.location.href.indexOf("dev") > -1) {
                 header_location = "https://header.dev.research.ucf.edu";
             }
             
