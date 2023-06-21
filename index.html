@@ -1,193 +1,204 @@
 <!DOCTYPE HTML>
 <html>
-        <head>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-            <!-- Optional theme -->
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-            <link rel="stylesheet" href="styles/bootstrap-select.css">
-            <link rel="stylesheet" href="styles/styles.css">
 
-			<link href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat" rel="stylesheet" type="text/css">
-            <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="styles/bootstrap-select.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <title>Research Apps</title>
-        </head>	
-		<body>
-           <!-- <script type="text/javascript" src="https://universityheader.ucf.edu/bar/js/university-header.js?use-bootstrap-overrides=1" id='ucfhb-script'> </script> -->
-		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-           <script src="js/bootstrap-select.js"></script>
-           <!-- Google Analytics Code added on 06/09/2015 -->
-           <script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			
-			  ga('create', 'UA-38330342-1', 'auto');
-			  ga('send', 'pageview');
-		
-		   </script>
-           <script type="text/javascript">
-		   		$(document).ready(function(e) {
-                    $('.selectpicker').selectpicker();
-                });
-			   	
-				function selectSystemsForDropDown(){
-					if($("#selectSystems").val()=='ALL'){
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							  $(this).show();
-						  }
-						});
-					}else if($("#selectSystems").val() == 'RESEARCH'){
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							  if($(this).hasClass( "research" )){
-								$(this).show();  
-							  } else{
-								$(this).hide();
-							  }
-						  }
-						});
-					}else{
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							  if($(this).hasClass( "comm" )){
-								$(this).show();  
-							  } else{
-								$(this).hide();  
-							  }
-						  }
-						});
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather">
 
-					}
-				}
-				
-				function selectSystems(id){
-					if(id == 'optradio_all'){
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							   if($(this).hasClass( "original" )){ // hide the old coi and io
-								$(this).show(); 
-							  }  if($(this).hasClass( "order" )){ // hide the old coi and io
-								$(this).hide(); 
-							  } else{
-								$(this).show();
-							  }
-						  } 
-						});
-					}else if(id == 'optradio_ucf'){
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							  if($(this).hasClass( "ucf" )){
-								$(this).show(); 
-								if($(this).hasClass( "original" )){ // hide the old coi and io
-									$(this).hide(); 
-								  }  if($(this).hasClass( "order" )){ // show the new coi and io
-									$(this).show(); 
-								  }  
-							  } else{
-								$(this).hide();
-							  }
-						  }
-						});
-					}else if(id == 'optradio_departmental'){
-						$( "div" ).each(function() {
-						  if($(this).hasClass( "sys" )){
-							  if($(this).hasClass( "departmental" )){
-								$(this).show();  
-							  } else{
-								$(this).hide();  
-							  }
-						  }
-						});
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Research Apps</title>
+</head>
 
-					}
-				}
-           </script>
-           <div class="panel-default">
-           </div>
-		   <div class="navbar navbar-default">
-              <div class="container-fluid">
-                   <div class="container" style="padding:0px;">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand hidden-xs hidden-sm" href=""><strong style="font-size:24px">UCF RESEARCH SYSTEMS</strong></a>
-                   	<span class="navbar-brand hidden-xs hidden-md hidden-lg"><a href=""><strong style="font-size:15px;font-weight:bold;">UCF RESEARCH SYSTEMS</strong></a></span>
-                    <span class="navbar-brand hidden-sm hidden-md hidden-lg"><a href=""><strong style="font-size:12px;font-weight:bold;">UCF RESEARCH SYSTEMS</strong></a></span>
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                      </button>	
-                    </div>
-                    
-                         <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right" style="margin-left:-20px;">
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button" aria-expanded="false"><strong style="font-size:18px">NEED HELP?</strong></a>
-                              <a href="ssohelp.html" class="hidden-sm hidden-md hidden-lg"><strong style="font-size:18px">SINGLE SIGN-ON HELP</strong></a>                              
-                              <ul class="dropdown-menu" role="menu" >
-                                <li class="hidden-xs">
-                                    <div style="width:550px;">
-                                    	<div >
-                                        	<table>
-                                                <tr>
-                                                    <tD style="padding:5px;">
-                                                        <table>
-                                                            <tr>
-                                                                <td style="padding:10px;font-weight:bold;"> 
-                                                                    <strong><img src="images/ldg_mail.png" width="24" height="15"/>&nbsp;&nbsp;EMAIL: <a href="mailto:GRITservicedesk@ucf.edu">GRITservicedesk@ucf.edu</a></strong>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="padding:10px;font-weight:bold;"> 
-                                                                    <strong><img src="images/ldg_phone.png" width="16" height="25"/>&nbsp;&nbsp;&nbsp;CALL: 407.823.5500</strong>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                    <tD class="separatortd">
-                                                        	
-                                                    </tD>
-                                                    <td style="padding:5px;">
-                                                        <table>
-                                                            <tr>
-                                                                <td style="padding:5px;"> 
-                                                               		<a href="ssohelp.html">
-                                                                    <div class="navigationbarchildwithmargin">
-                                                                    	
-	                                                                    	SINGLE SIGN-ON SYSTEM HELP
-                                                                        
-                                                                    </div>
-                                                                    </a>
-                                                                </td>
-                                                            </tr>                                                            
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
+<!-- Begin Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PD64P68M68"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-PD64P68M68');
+</script>
+<!-- End Google Analytics -->
+
+<body>
+  <!-- <script type="text/javascript" src="https://universityheader.ucf.edu/bar/js/university-header.js?use-bootstrap-overrides=1" id='ucfhb-script'> </script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function (e) {
+      $('.selectpicker').selectpicker();
+    });
+
+    function selectSystemsForDropDown() {
+      if ($("#selectSystems").val() == 'ALL') {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            $(this).show();
+          }
+        });
+      } else if ($("#selectSystems").val() == 'RESEARCH') {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            if ($(this).hasClass("research")) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          }
+        });
+      } else {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            if ($(this).hasClass("comm")) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          }
+        });
+
+      }
+    }
+
+    function selectSystems(id) {
+      if (id == 'optradio_all') {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            if ($(this).hasClass("original")) { // hide the old coi and io
+              $(this).show();
+            } if ($(this).hasClass("order")) { // hide the old coi and io
+              $(this).hide();
+            } else {
+              $(this).show();
+            }
+          }
+        });
+      } else if (id == 'optradio_ucf') {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            if ($(this).hasClass("ucf")) {
+              $(this).show();
+              if ($(this).hasClass("original")) { // hide the old coi and io
+                $(this).hide();
+              } if ($(this).hasClass("order")) { // show the new coi and io
+                $(this).show();
+              }
+            } else {
+              $(this).hide();
+            }
+          }
+        });
+      } else if (id == 'optradio_departmental') {
+        $("div").each(function () {
+          if ($(this).hasClass("sys")) {
+            if ($(this).hasClass("departmental")) {
+              $(this).show();
+            } else {
+              $(this).hide();
+            }
+          }
+        });
+
+      }
+    }
+  </script>
+  <div class="panel-default">
+  </div>
+  <div class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="container" style="padding:0px;">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand hidden-xs hidden-sm" href=""><strong style="font-size:24px">UCF RESEARCH
+            SYSTEMS</strong></a>
+        <span class="navbar-brand hidden-xs hidden-md hidden-lg"><a href=""><strong
+              style="font-size:15px;font-weight:bold;">UCF RESEARCH SYSTEMS</strong></a></span>
+        <span class="navbar-brand hidden-sm hidden-md hidden-lg"><a href=""><strong
+              style="font-size:12px;font-weight:bold;">UCF RESEARCH SYSTEMS</strong></a></span>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right" style="margin-left:-20px;">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"
+                aria-expanded="false"><strong style="font-size:18px">NEED HELP?</strong></a>
+              <a href="ssohelp.html" class="hidden-sm hidden-md hidden-lg"><strong style="font-size:18px">SINGLE SIGN-ON
+                  HELP</strong></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="hidden-xs">
+                  <div style="width:550px;">
+                    <div>
+                      <table>
+                        <tr>
+                          <tD style="padding:5px;">
+                            <table>
+                              <tr>
+                                <td style="padding:10px;font-weight:bold;">
+                                  <strong><img src="images/ldg_mail.png" width="24" height="15" />&nbsp;&nbsp;EMAIL: <a
+                                      href="mailto:GRITservicedesk@ucf.edu">GRITservicedesk@ucf.edu</a></strong>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px;font-weight:bold;">
+                                  <strong><img src="images/ldg_phone.png" width="16"
+                                      height="25" />&nbsp;&nbsp;&nbsp;CALL: 407.823.5500</strong>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <tD class="separatortd">
+
+                          </tD>
+                          <td style="padding:5px;">
+                            <table>
+                              <tr>
+                                <td style="padding:5px;">
+                                  <a href="ssohelp.html">
+                                    <div class="navigationbarchildwithmargin">
+
+                                      SINGLE SIGN-ON SYSTEM HELP
+
                                     </div>
-                                </li>
-                              </ul>
-                        </li>
-						</ul>
-                      </div><!-- /.navbar-collapse -->
-                    </div>  
-              </div><!-- /.container-fluid -->
-        </div>           
- 		   <!--Single Sign On-->
-		   <div class="ssosection">
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </div><!-- /.container-fluid -->
+  </div>
+  <!--Single Sign On-->
+  <div class="ssosection">
 
-				<div id="content" class="sectionwrapper">
-                    <!-- <div row="bg row text-danger" style="text-align:left !important;margin:5px;padding:15px !important; background-color: #f2dede!important;">
+    <div id="content" class="sectionwrapper">
+      <!-- <div row="bg row text-danger" style="text-align:left !important;margin:5px;padding:15px !important; background-color: #f2dede!important;">
                         We are currently experiencing technical difficulties with following Applications. Our team is actively working to fix the issue. We hope to have this resolved soon. Thank you for your patience.<br><br>
                         <ul>
                             <li>1.PARIS<br><br></li>
@@ -196,47 +207,52 @@
                             <li>4.PDA<br><br></li>
                         </ul>
                     </div> -->
-                    <h1 style="font-size:22px">Stay Connected and Work Remotely</h1>
-                    <div class="syslist">
-                        <!--- Outlook -->
-                        <div class="sys office research ucf">
-                            <p class="sysimg" >
-                                <a href="https://outlook.com/ucf.edu" target="_blank">
-                                <img src="images/office365.png" width="100%" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://outlook.com/ucf.edu" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.office .sysimg').hide();" onMouseOut="$('.office .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Office 365
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Web access to Outlook, OneDrive, Teams, Word, Excel, PowerPoint etc</span><br>
-                                    Microsoft Office online and Outlook web email are available through Office 365. Log in with your NID and NID password. </p>
-                            </div>
-                            </a>
-                        </div>
-                        <!-- MS Teams -->
-                        <div class="sys teams research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://teams.microsoft.com/ " target="_blank">
-                            	<img src="images/microsoft-teams.png" height="135" width="135" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://teams.microsoft.com/ " target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.teams .sysimg').hide();" onMouseOut="$('.teams .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Microsoft Teams
-                                </p>
-                                <p class="expandtext"> 
-	                              	<span class="expandtexthead">Team collaboration and file sharing</span><br>
-                                      Use teams for team collaboration, chat and file sharing. Log in with your NID and NID password.                             		
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                        <!--- OneDrive -->
-                        <!--  <div class="sys onedrive research ucf">
+      <h1 style="font-size:22px">Stay Connected and Work Remotely</h1>
+      <div class="syslist">
+        <!--- Outlook -->
+        <div class="sys office research ucf">
+          <p class="sysimg">
+            <a href="https://outlook.com/ucf.edu" target="_blank">
+              <img src="images/office365.png" width="100%" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://outlook.com/ucf.edu" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.office .sysimg').hide();"
+              onMouseOut="$('.office .sysimg').show();">
+              <p class="normaltext">
+                Office 365
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Web access to Outlook, OneDrive, Teams, Word, Excel, PowerPoint
+                  etc</span><br>
+                Microsoft Office online and Outlook web email are available through Office 365. Log in with your NID and
+                NID password.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- MS Teams -->
+        <div class="sys teams research ucf">
+          <p class="sysimg">
+            <a href="https://teams.microsoft.com/ " target="_blank">
+              <img src="images/microsoft-teams.png" height="135" width="135" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://teams.microsoft.com/ " target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.teams .sysimg').hide();"
+              onMouseOut="$('.teams .sysimg').show();">
+              <p class="normaltext">
+                Microsoft Teams
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Team collaboration and file sharing</span><br>
+                Use teams for team collaboration, chat and file sharing. Log in with your NID and NID password.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- OneDrive -->
+        <!--  <div class="sys onedrive research ucf">
                                 <p class="sysimg" >
                                     <a href="https://ucf-my.sharepoint.com/" target="_blank">
                                     <img src="images/onedrive.png" width="50%" alt="myresearch">
@@ -254,399 +270,457 @@
                                 </div>
                                 </a>
                             </div> -->
-                        <!--- Zoom -->
-                        <div class="sys zoom research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://ucf.zoom.us/" target="_blank">
-                            	<img src="images/zoomlogo.png" width="50%" alt="Zoom">
-                                </a>
-                            </p>
-                            <a href="https://ucf.zoom.us/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.zoom .sysimg').hide();" onMouseOut="$('.zoom .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Zoom
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Zoom video conferencing for meetings and webinars</span><br>
-                                    The university has a campus-wide license for Zoom, a video conferencing platform for online
-                                    meetings, conferences, webinars, and lectures.
-                                    If you prefer to continue holding your class at its scheduled time and lecture, try Zoom by visiting ucf.zoom.us
-                                    and clicking "Sign In," using your NID.
-								</p>
-                            </div>
-                            </a>
-                        </div> 
+        <!--- Zoom -->
+        <div class="sys zoom research ucf">
+          <p class="sysimg">
+            <a href="https://ucf.zoom.us/" target="_blank">
+              <img src="images/zoomlogo.png" width="50%" alt="Zoom">
+            </a>
+          </p>
+          <a href="https://ucf.zoom.us/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.zoom .sysimg').hide();"
+              onMouseOut="$('.zoom .sysimg').show();">
+              <p class="normaltext">
+                Zoom
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Zoom video conferencing for meetings and webinars</span><br>
+                The university has a campus-wide license for Zoom, a video conferencing platform for online
+                meetings, conferences, webinars, and lectures.
+                If you prefer to continue holding your class at its scheduled time and lecture, try Zoom by visiting
+                ucf.zoom.us
+                and clicking "Sign In," using your NID.
+              </p>
+            </div>
+          </a>
+        </div>
 
 
-                    </div>
-                    <br>
-                        <div class="row" style="margin:0px !important">
-                            <h1 style="padding:0px 0px 10px 0px;font-size:1.2em;font-weight:bold;">Helpful Resources</h1>
-                            <ul>
-                                <li>1. <b style="font-weight: bold;">NID</b> help is available here: <a class="anchor" target="_blank" href="ssohelp.html"><b>https://apps.research.ucf.edu/ssohelp.html</b></a></li>&nbsp;
-                                <li>2. <b style="font-weight: bold;">MS Teams</b> help is available here: <a class="anchor" target="_blank" href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=28f31d654f564704128b022f0310c705"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=28f31d654f564704128b022f0310c705</b></a> </li> &nbsp;
-                                <li>3. <b style="font-weight: bold;">OneDrive</b> FAQs are available here: <a class="anchor" target="_blank" href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=837827564f16fa005d3f7f75f110c7e6"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=837827564f16fa005d3f7f75f110c7e6</b></a>  </li> &nbsp;
-                                <li>4. Additional help on working remotely  is available here: <Br><a class="anchor" target="_blank" href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=c00b93061bd704105cd6b912cd4bcbe3"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=c00b93061bd704105cd6b912cd4bcbe3</b></a>  </li> &nbsp;
-                                <li>5. <b style="font-weight: bold;">Zoom</b> helpful documentation is available here: <a class="anchor" href="https://support.zoom.us/hc/en-us" target="_blank"><b>https://support.zoom.us/hc/en-us</b></a>. Support on using
-                                <b style="font-weight: bold;">Zoom</b> in WebCourses@UCF is available here: <a class="anchor" href="https://cdl.ucf.edu/support/webcourses/"
-                                    target="_blank"><b>https://cdl.ucf.edu/support/webcourses/</b></a></li> &nbsp;
-                            </ul>
-                        </div>
-                        <hr>
+      </div>
+      <br>
+      <div class="row" style="margin:0px !important">
+        <h1 style="padding:0px 0px 10px 0px;font-size:1.2em;font-weight:bold;">Helpful Resources</h1>
+        <ul>
+          <li>1. <b style="font-weight: bold;">NID</b> help is available here: <a class="anchor" target="_blank"
+              href="ssohelp.html"><b>https://apps.research.ucf.edu/ssohelp.html</b></a></li>&nbsp;
+          <li>2. <b style="font-weight: bold;">MS Teams</b> help is available here: <a class="anchor" target="_blank"
+              href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=28f31d654f564704128b022f0310c705"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=28f31d654f564704128b022f0310c705</b></a>
+          </li> &nbsp;
+          <li>3. <b style="font-weight: bold;">OneDrive</b> FAQs are available here: <a class="anchor" target="_blank"
+              href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=837827564f16fa005d3f7f75f110c7e6"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=837827564f16fa005d3f7f75f110c7e6</b></a>
+          </li> &nbsp;
+          <li>4. Additional help on working remotely is available here: <Br><a class="anchor" target="_blank"
+              href="https://ucf.service-now.com/ucfit?id=kb_article&sys_id=c00b93061bd704105cd6b912cd4bcbe3"><b>https://ucf.service-now.com/ucfit?id=kb_article&sys_id=c00b93061bd704105cd6b912cd4bcbe3</b></a>
+          </li> &nbsp;
+          <li>5. <b style="font-weight: bold;">Zoom</b> helpful documentation is available here: <a class="anchor"
+              href="https://support.zoom.us/hc/en-us" target="_blank"><b>https://support.zoom.us/hc/en-us</b></a>.
+            Support on using
+            <b style="font-weight: bold;">Zoom</b> in WebCourses@UCF is available here: <a class="anchor"
+              href="https://cdl.ucf.edu/support/webcourses/"
+              target="_blank"><b>https://cdl.ucf.edu/support/webcourses/</b></a>
+          </li> &nbsp;
+        </ul>
+      </div>
+      <hr>
 
-                    <!---<h1>Single Sign-On Systems</h1>--->
+      <!---<h1>Single Sign-On Systems</h1>--->
 
-                    <!--SSO systems-->
+      <!--SSO systems-->
 
 
-                    <h1 style="font-size:22px">Workday</h1>
-                    <div class="syslist">
+      <h1 style="font-size:22px">Workday</h1>
+      <div class="syslist">
 
-                        <!-- Workday -->
-                        <div class="sys workday research ucf">
-                            <p class="sysimg">
-                                <a href="https://workday.ucf.edu/" target="_blank">
-                                    <img src="/images/downloadW2.png"  alt="workday">
-                                </a>
-                            </p>
-                            <a href="https://workday.ucf.edu/" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.workday .sysimg').hide();"
-                                    onMouseOut="$('.workday .sysimg').show();">
-                                    <p class="normaltext">
-                                        Workday
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead"> Workday </span><br>
-                                            Workday is the new Enterprise Resource Planning (ERP) system that will replace PeopleSoft, the current ERP system in place, changing administrative processes across UCF. Workday provides a modern, unified system; simplified time management; standardized business processes; reporting with real-time data; cloud-based analytics and much more. 
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+        <!-- Workday -->
+        <div class="sys workday research ucf">
+          <p class="sysimg">
+            <a href="https://workday.ucf.edu/" target="_blank">
+              <img src="/images/downloadW2.png" alt="workday">
+            </a>
+          </p>
+          <a href="https://workday.ucf.edu/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.workday .sysimg').hide();"
+              onMouseOut="$('.workday .sysimg').show();">
+              <p class="normaltext">
+                Workday
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead"> Workday </span><br>
+                Workday is the new Enterprise Resource Planning (ERP) system that will replace PeopleSoft, the current
+                ERP system in place, changing administrative processes across UCF. Workday provides a modern, unified
+                system; simplified time management; standardized business processes; reporting with real-time data;
+                cloud-based analytics and much more.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                        <!-- Adaptive Planning -->
-                    <div class="sys ap research ucf">
-                      <p class="sysimg">
-                          <a href="https://federation.net.ucf.edu/adfs/ls/idpinitiatedsignon.aspx?logintoRP=https://login.adaptiveinsights.com:443/samlsso/VU5JVk9GQ0VOVFJBTEZMQVBST0Q=" target="_blank">
-                              <img src="/images/downloadW2.png" alt="Adaptive Planning">
-                          </a>
-                      </p>
-                      <a href="https://federation.net.ucf.edu/adfs/ls/idpinitiatedsignon.aspx?logintoRP=https://login.adaptiveinsights.com:443/samlsso/VU5JVk9GQ0VOVFJBTEZMQVBST0Q=" target="_blank">
-                          <div class="systext" style="clear: both" onMouseOver="$('.ap .sysimg').hide();"
-                              onMouseOut="$('.ap .sysimg').show();">
-                              <p class="normaltext">
-                                  Adaptive Planning
-                              </p>
-                              <p class="expandtext">
-                                  <span class="expandtexthead">Adaptive Planning</span><br>
-                                  Workday Adaptive Planning is an enterprise cloud-based solution that provides a single consolidated source for collaborative planning, budgeting and reporting. It will serve as a pre-launch component for the Knight Vision program and supports the new UCF Budget Model Redesign Initiative.
-                              </p>
-                          </div>
-                      </a>
-                  </div>
+        <!-- Adaptive Planning -->
+        <div class="sys ap research ucf">
+          <p class="sysimg">
+            <a href="https://federation.net.ucf.edu/adfs/ls/idpinitiatedsignon.aspx?logintoRP=https://login.adaptiveinsights.com:443/samlsso/VU5JVk9GQ0VOVFJBTEZMQVBST0Q="
+              target="_blank">
+              <img src="/images/downloadW2.png" alt="Adaptive Planning">
+            </a>
+          </p>
+          <a href="https://federation.net.ucf.edu/adfs/ls/idpinitiatedsignon.aspx?logintoRP=https://login.adaptiveinsights.com:443/samlsso/VU5JVk9GQ0VOVFJBTEZMQVBST0Q="
+            target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.ap .sysimg').hide();"
+              onMouseOut="$('.ap .sysimg').show();">
+              <p class="normaltext">
+                Adaptive Planning
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Adaptive Planning</span><br>
+                Workday Adaptive Planning is an enterprise cloud-based solution that provides a single consolidated
+                source for collaborative planning, budgeting and reporting. It will serve as a pre-launch component for
+                the Knight Vision program and supports the new UCF Budget Model Redesign Initiative.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                    </div>
+      </div>
 
-                    <h1 style="font-size:22px">Reporting Tools</h1>
-                    <div class="syslist">
-                        <!--- Aurora -->
-                        <div class="sys aurora research ucf">
-                            <p class="sysimg">
-                                <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
-                                    <img src="images/ldg_aurora.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.aurora .sysimg').hide();"
-                                    onMouseOut="$('.aurora .sysimg').show();">
-                                    <p class="normaltext">
-                                        Run research reports for UCF
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">A University Resources Online Reporting Application</span><br>
-                                        AURORA is an enterprise web system which provides on-demand or subscription-based reports on funded
-                                        research activity at UCF. Users can view reports on expenditures, new funding, and current burn
-                                        rates among other reports, many of which are available at both aggregate and detailed levels. </p>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- Paris -->
-                        <div class="sys paris research ucf">
-                            <p class="sysimg">
-                                <a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
-                                    <img src="images/ldg_paris.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.paris .sysimg').hide();"
-                                    onMouseOut="$('.paris .sysimg').show();">
-                                    <p class="normaltext">
-                                        Analyze research financials and located assets
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">Personal Access to Research Information System</span><br>
-                                        PARIS is an enterprise web system that allows researchers, chairs, deans and administrators to view
-                                        information regarding their research proposals, awards, budget and expenditures, deliverables and
-                                        documents. The system also provides information about research equipment valued at $10K or above at
-                                        UCF.
-                    
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <!--- PDA -->
-                        <div class="sys pda research ucf">
-                            <p class="sysimg">
-                                <a href="https://pda.research.ucf.edu/" target="_blank">
-                                    <img src="images/ldg_pda.png" height="135" width="135" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://pda.research.ucf.edu/" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.pda .sysimg').hide();"
-                                    onMouseOut="$('.pda .sysimg').show();">
-                                    <p class="normaltext">
-                                        Research Dashboard
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">Research Dashboard</span><br>
-                                        The research dashboard shows key metrics about UCF in regards to research awards, expenditures,
-                                        patents and other research activities. Also, the research dashboard provides a percentage comparison
-                                        for each metric allowing the user to quickly see how a particular area is operating to the previous
-                                        fiscal year.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+      <h1 style="font-size:22px">Reporting Tools</h1>
+      <div class="syslist">
+        <!--- Aurora -->
+        <div class="sys aurora research ucf">
+          <p class="sysimg">
+            <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
+              <img src="images/ldg_aurora.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://reports.research.ucf.edu/mainmenu.cfm" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.aurora .sysimg').hide();"
+              onMouseOut="$('.aurora .sysimg').show();">
+              <p class="normaltext">
+                Run research reports for UCF
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">A University Resources Online Reporting Application</span><br>
+                AURORA is an enterprise web system which provides on-demand or subscription-based reports on funded
+                research activity at UCF. Users can view reports on expenditures, new funding, and current burn
+                rates among other reports, many of which are available at both aggregate and detailed levels.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- Paris -->
+        <div class="sys paris research ucf">
+          <p class="sysimg">
+            <a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
+              <img src="images/ldg_paris.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://paris.research.ucf.edu/mainmenu.cfm" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.paris .sysimg').hide();"
+              onMouseOut="$('.paris .sysimg').show();">
+              <p class="normaltext">
+                Analyze research financials and located assets
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Personal Access to Research Information System</span><br>
+                PARIS is an enterprise web system that allows researchers, chairs, deans and administrators to view
+                information regarding their research proposals, awards, budget and expenditures, deliverables and
+                documents. The system also provides information about research equipment valued at $10K or above at
+                UCF.
 
-                        <!--- Scholar Expertise Portal -->
-                        <div class="sys scholar research ucf">
-                            <p class="sysimg">
-                                <a href="https://ucf.discovery.academicanalytics.com/dashboard" target="_blank">
-                                    <img src="images/scholar-expertise-portal.png" height="135" width="100%"  alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf.discovery.academicanalytics.com/dashboard" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.scholar .sysimg').hide();"
-                                    onMouseOut="$('.scholar .sysimg').show();">
-                                    <p class="normaltext">
-                                        Scholar Expertise Portal
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">Scholar Expertise Portal</span><br>
-                                        The UCF discovery dashboard combines Academic Analytics' accurate and comprehensive scholarly activity data with the university's own warehoused data to create a modern, configurable, fully pre-populated website that showcases research and researchers at the faculty, program, division, and cost center level.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                    
-                    </div>
-                    
-                    <h1 style="font-size:22px">Huron Research Suite</h1>
-					<div class="syslist">
-                        <!--- Huron Grants -->
-                        <div class="sys hrsgrants research ucf" style="line-height:1.25em;">
-                            <p class="sysimg" >
-                                <a href="https://ucf4.huronresearchsuite.com/" target="_blank">
-                                    <img src="images/huron_grants.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf4.huronresearchsuite.com/" target="_blank">
-                                <div class="systext" style="clear: both;" onMouseOver="$('.hrsgrants .sysimg').hide();" onMouseOut="$('.hrsgrants .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Huron Grants<!--: Manage Proposals and Awards --> 
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Huron Grants</span><br>
-                                        Huron Grants is a comprehensive solution for proposal submission and award management. The system ensures successful proposal creation and budget development, electronic submission to grants.gov, and post-award management capabilities include award setup, modification entry, and budget reconciliation to enter and track sponsor approved budgets.                            
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <!--- Huron Agreements -->
-                        <div class="sys hrsagreements research ucf">
-                                <p class="sysimg" >
-                                    <a href="https://ucf2.huronresearchsuite.com/" target="_blank">
-                                    <img src="images/huron_agreements.png" alt="myresearch">
-                                    </a>
-                                </p>
-                                <a href="https://ucf2.huronresearchsuite.com/" target="_blank">
-                                    <div class="systext" style="clear: both;" onMouseOver="$('.hrsagreements .sysimg').hide();" onMouseOut="$('.hrsagreements .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Huron Agreements<!--: Manage Research Agreements <span style="color:blue;">(Coming in Summer 2019)</span> --> 
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Huron Agreements</span><br>
-                                        Huron Agreement provides management of financial and non-financial research agreements.                                     
-                                    </p>
-                                    </div>
-                                </a>
-                        </div>
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- PDA -->
+        <div class="sys pda research ucf">
+          <p class="sysimg">
+            <a href="https://pda.research.ucf.edu/" target="_blank">
+              <img src="images/ldg_pda.png" height="135" width="135" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://pda.research.ucf.edu/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.pda .sysimg').hide();"
+              onMouseOut="$('.pda .sysimg').show();">
+              <p class="normaltext">
+                Research Dashboard
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Research Dashboard</span><br>
+                The research dashboard shows key metrics about UCF in regards to research awards, expenditures,
+                patents and other research activities. Also, the research dashboard provides a percentage comparison
+                for each metric allowing the user to quickly see how a particular area is operating to the previous
+                fiscal year.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                        <!--- Huron IRB -->
-                        <div class="sys hrsirb research ucf" >
-                            <p class="sysimg" >
-                                <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
-                                <img src="images/huron_irb.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.hrsirb .sysimg').hide();" onMouseOut="$('.hrsirb .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Huron IRB: Institutional Review Board Submission and Approval
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Huron IRB</span><br>
-                                    Huron IRB facilitates high-quality, compliant reviews for research studies involving human subjects. The application combines compliant IRB operating practices from the HRPP Toolkit with human research protection best practices.                               
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                        <!--- Huron IACUC -->
-                        <div class="sys hrsiacuc research ucf" style="line-height:1.25em;">
-                            <p class="sysimg" >
-                                <a href="https://ucf3.huronresearchsuite.com/" target="_blank">
-                                    <img src="images/huron_iacuc.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf3.huronresearchsuite.com/" target="_blank">
-                                <div class="systext" style="clear: both;" onMouseOver="$('.hrsiacuc .sysimg').hide();" onMouseOut="$('.hrsiacuc .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Huron IACUC <!--: Institutional Animal Care and Use Committee Submission and Approval <span style="color:blue;">(Coming in Summer 2019)</span>-->
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Huron IACUC</span><br>
-                                        Huron IACUC facilitates high-quality, compliant reviews for research studies involving the care or use of animals. The system provides access to species, procedures, substances, training information and inspections to facilitate the submission and review process.                                  
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+        <!--- Scholar Expertise Portal -->
+        <div class="sys scholar research ucf">
+          <p class="sysimg">
+            <a href="https://ucf.discovery.academicanalytics.com/dashboard" target="_blank">
+              <img src="images/scholar-expertise-portal.png" height="135" width="100%" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf.discovery.academicanalytics.com/dashboard" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.scholar .sysimg').hide();"
+              onMouseOut="$('.scholar .sysimg').show();">
+              <p class="normaltext">
+                Scholar Expertise Portal
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Scholar Expertise Portal</span><br>
+                The UCF discovery dashboard combines Academic Analytics' accurate and comprehensive scholarly activity
+                data with the university's own warehoused data to create a modern, configurable, fully pre-populated
+                website that showcases research and researchers at the faculty, program, division, and cost center
+                level.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                           <!--- Huron ECC -->
-                           <div class="sys ecrt research ucf">
-                            <p class="sysimg" >
-                                <a href="https://ucf.huronecc.com/ecc/RedirectHome.do" target="_blank">
-                                    <img src="images/ECC.png" alt="myresearch">
-                                </a>
-                            </p>
-                                <a href="https://ucf.huronecc.com/ecc/RedirectHome.do" target="_blank">
-                                    <div class="systext" style="clear: both" onMouseOver="$('.ecrt .sysimg').hide();" onMouseOut="$('.ecrt .sysimg').show();"> 
-                                        <p class="normaltext">
-                                            Effort reporting & certification
-                                        </p>
-                                        <p class="expandtext"> 
-                                            <span class="expandtexthead">Effort Reporting and Certification</span><br>
-                                            This enterprise web system facilitates UCF's effort reporting and certification process in compliance with UCF's effort reporting policies, federal policy OMB Circular A-21 section J.10., NIH Salary Limitation on Grants, and other policies that govern the need to provide certification of an individual's sponsored or non-sponsored effort.                                    
-                                        </p>
-                                    </div>
-                                </a>
-                        </div>
+      </div>
 
-                        <!--- Huron Safety -->
-                        <div class="sys hrssafe research ucf" style="background-color:white; line-height:1.25em;">
-                            <p class="sysimg" >
-                                <a href="https://ucf5.huronresearchsuite.com/" target="_blank">
-                                    <img src="images/Safety.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf5.huronresearchsuite.com/" target="_blank">
-                                <div class="systext" style="clear: both;background-color:#e9e9e9;" onMouseOver="$('.hrssafe .sysimg').hide();" onMouseOut="$('.hrssafe .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Huron Safety<!--: Disclose and Manage Interest-->                               
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Huron Safety</span><br>
-                                        Huron Safety is a comprehensive solution that supports the Institutional Biosafety Office and Committee. It supports the submission of safety protocols, thorough review cycles, the ability to carry out continuing reviews, a complete amendment process, a full suite of reports, and integration with other solutions in the Huron Research Suite.                                </p>
-                                </div>
-                            </a>
-                        </div>   
+      <h1 style="font-size:22px">Huron Research Suite</h1>
+      <div class="syslist">
+        <!--- Huron Grants -->
+        <div class="sys hrsgrants research ucf" style="line-height:1.25em;">
+          <p class="sysimg">
+            <a href="https://ucf4.huronresearchsuite.com/" target="_blank">
+              <img src="images/huron_grants.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf4.huronresearchsuite.com/" target="_blank">
+            <div class="systext" style="clear: both;" onMouseOver="$('.hrsgrants .sysimg').hide();"
+              onMouseOut="$('.hrsgrants .sysimg').show();">
+              <p class="normaltext">
+                Huron Grants<!--: Manage Proposals and Awards -->
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Huron Grants</span><br>
+                Huron Grants is a comprehensive solution for proposal submission and award management. The system
+                ensures successful proposal creation and budget development, electronic submission to grants.gov, and
+                post-award management capabilities include award setup, modification entry, and budget reconciliation to
+                enter and track sponsor approved budgets.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- Huron Agreements -->
+        <div class="sys hrsagreements research ucf">
+          <p class="sysimg">
+            <a href="https://ucf2.huronresearchsuite.com/" target="_blank">
+              <img src="images/huron_agreements.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf2.huronresearchsuite.com/" target="_blank">
+            <div class="systext" style="clear: both;" onMouseOver="$('.hrsagreements .sysimg').hide();"
+              onMouseOut="$('.hrsagreements .sysimg').show();">
+              <p class="normaltext">
+                Huron
+                Agreements<!--: Manage Research Agreements <span style="color:blue;">(Coming in Summer 2019)</span> -->
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Huron Agreements</span><br>
+                Huron Agreement provides management of financial and non-financial research agreements.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                        <!--- Huron COI -->
-                        <div class="sys hrscoi research ucf" style="background-color: white; line-height:1.25em;">
-                            <p class="sysimg" >
-                              <a href="https://ucf6.huronresearchsuite.com/" target="_blank">
-                                <img src="images/huron_coi.png" alt="myresearch">
-                              </a>
-                            </p>
-                            <div class="systext" style="clear: both;background-color:#e9e9e9;" onMouseOver="$('.hrscoi .sysimg').hide();" onMouseOut="$('.hrscoi .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Huron COI<!--: Disclose and Manage Interest-->                              
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Huron COI</span><br>
-                                    Huron COI streamlines the disclosure process for potential conflicts of interest. The system integrates annual disclosure data with related research certifications to ensure transparency and track compliance.                                
-                                </p>
-                            </div>
-                        </div>   
-                        
+        <!--- Huron IRB -->
+        <div class="sys hrsirb research ucf">
+          <p class="sysimg">
+            <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
+              <img src="images/huron_irb.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf1.huronresearchsuite.com/IRB" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.hrsirb .sysimg').hide();"
+              onMouseOut="$('.hrsirb .sysimg').show();">
+              <p class="normaltext">
+                Huron IRB: Institutional Review Board Submission and Approval
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Huron IRB</span><br>
+                Huron IRB facilitates high-quality, compliant reviews for research studies involving human subjects. The
+                application combines compliant IRB operating practices from the HRPP Toolkit with human research
+                protection best practices.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- Huron IACUC -->
+        <div class="sys hrsiacuc research ucf" style="line-height:1.25em;">
+          <p class="sysimg">
+            <a href="https://ucf3.huronresearchsuite.com/" target="_blank">
+              <img src="images/huron_iacuc.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf3.huronresearchsuite.com/" target="_blank">
+            <div class="systext" style="clear: both;" onMouseOver="$('.hrsiacuc .sysimg').hide();"
+              onMouseOut="$('.hrsiacuc .sysimg').show();">
+              <p class="normaltext">
+                Huron IACUC
+                <!--: Institutional Animal Care and Use Committee Submission and Approval <span style="color:blue;">(Coming in Summer 2019)</span>-->
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Huron IACUC</span><br>
+                Huron IACUC facilitates high-quality, compliant reviews for research studies involving the care or use
+                of animals. The system provides access to species, procedures, substances, training information and
+                inspections to facilitate the submission and review process.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                    </div>
+        <!--- Huron ECC -->
+        <div class="sys ecrt research ucf">
+          <p class="sysimg">
+            <a href="https://ucf.huronecc.com/ecc/RedirectHome.do" target="_blank">
+              <img src="images/ECC.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf.huronecc.com/ecc/RedirectHome.do" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.ecrt .sysimg').hide();"
+              onMouseOut="$('.ecrt .sysimg').show();">
+              <p class="normaltext">
+                Effort reporting & certification
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Effort Reporting and Certification</span><br>
+                This enterprise web system facilitates UCF's effort reporting and certification process in compliance
+                with UCF's effort reporting policies, federal policy OMB Circular A-21 section J.10., NIH Salary
+                Limitation on Grants, and other policies that govern the need to provide certification of an
+                individual's sponsored or non-sponsored effort.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                    
+        <!--- Huron Safety -->
+        <div class="sys hrssafe research ucf" style="background-color:white; line-height:1.25em;">
+          <p class="sysimg">
+            <a href="https://ucf5.huronresearchsuite.com/" target="_blank">
+              <img src="images/Safety.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf5.huronresearchsuite.com/" target="_blank">
+            <div class="systext" style="clear: both;background-color:#e9e9e9;"
+              onMouseOver="$('.hrssafe .sysimg').hide();" onMouseOut="$('.hrssafe .sysimg').show();">
+              <p class="normaltext">
+                Huron Safety<!--: Disclose and Manage Interest-->
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Huron Safety</span><br>
+                Huron Safety is a comprehensive solution that supports the Institutional Biosafety Office and Committee.
+                It supports the submission of safety protocols, thorough review cycles, the ability to carry out
+                continuing reviews, a complete amendment process, a full suite of reports, and integration with other
+                solutions in the Huron Research Suite.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                    <h1 style="font-size:22px">Research Development & Training</h1>
-                    <div class="syslist">
-                        <!--- Pivot -->
-                        <div class="sys pivot research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://pivot.proquest.com/" target="_blank">
-                            	<img src="images/ldg_pivot.png" height="113" width="214" alt="pivot">
-                                </a>
-                            </p>
-                            <a href="https://pivot.proquest.com/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.pivot .sysimg').hide();" onMouseOut="$('.pivot .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Discover global funding opportunities
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Pivot</span><br>
-									ProQuest Pivot (R) is a comprehensive database for finding funding opportunities from International, Federal, State and Private sponsors, uniquely matched to researchers' expertise. Researchers can save searches and receive weekly updates of new matched opportunities.
-								</p>
-                            </div>
-                            </a>
-                        </div>
-                        <!--- InfoReady -->
-                        <div class="sys infoready research ucf">
-                            <p class="sysimg" >
-                                <a href="https://ucf.infoready4.com/" target="_blank">
-                                <img src="images/ldg_infoready.png" height="113" width="214" alt="pivot">
-                                </a>
-                            </p>
-                            <a href="https://ucf.infoready4.com/" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.infoready .sysimg').hide();" onMouseOut="$('.infoready .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Limited Submissions and Internal Programs Submission portal
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">InfoReady</span><br>
-                                    UCF InfoReady is a support software to apply to limited submissions and internal programs. It can be easily accessed via single sign-on and features a user-friendly homepage that lists all active opportunities and provides a convenient submission deadline calendar.
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                        <!--- Citi -->
-                        <div class="sys citi research ucf">
-                            <p class="sysimg" >
-                                <a href="http://citi.research.ucf.edu" target="_blank">
-                                <img src="images/ldg_citi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="http://citi.research.ucf.edu" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.citi .sysimg').hide();" onMouseOut="$('.citi .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Collaborative Institutional Training Initiative
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Collaborative Institutional Training Initiative</span><br>
-                                    The CITI Program at the University of Miami provides web-based training materials to serve millions of learners at academic institutions, government agencies, and commercial organizations in the U.S. and around the world. CITI provides educational training content that promotes the quality of and public trust in the research enterprise.                                    
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
+        <!--- Huron COI -->
+        <div class="sys hrscoi research ucf" style="background-color: white; line-height:1.25em;">
+          <p class="sysimg">
+            <a href="https://ucf6.huronresearchsuite.com/" target="_blank">
+              <img src="images/huron_coi.png" alt="myresearch">
+            </a>
+          </p>
+          <div class="systext" style="clear: both;background-color:#e9e9e9;" onMouseOver="$('.hrscoi .sysimg').hide();"
+            onMouseOut="$('.hrscoi .sysimg').show();">
+            <p class="normaltext">
+              Huron COI<!--: Disclose and Manage Interest-->
+            </p>
+            <p class="expandtext">
+              <span class="expandtexthead">Huron COI</span><br>
+              Huron COI streamlines the disclosure process for potential conflicts of interest. The system integrates
+              annual disclosure data with related research certifications to ensure transparency and track compliance.
+            </p>
+          </div>
+        </div>
 
-                    <h1 style="font-size:22px">Contract and Document Management</h1>   
-                    <div class="syslist">
-                        <!--- Move -->
-                        <!-- 
+
+      </div>
+
+
+
+      <h1 style="font-size:22px">Research Development & Training</h1>
+      <div class="syslist">
+        <!--- Pivot -->
+        <div class="sys pivot research ucf">
+          <p class="sysimg">
+            <a href="https://pivot.proquest.com/" target="_blank">
+              <img src="images/ldg_pivot.png" height="113" width="214" alt="pivot">
+            </a>
+          </p>
+          <a href="https://pivot.proquest.com/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.pivot .sysimg').hide();"
+              onMouseOut="$('.pivot .sysimg').show();">
+              <p class="normaltext">
+                Discover global funding opportunities
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Pivot</span><br>
+                ProQuest Pivot (R) is a comprehensive database for finding funding opportunities from International,
+                Federal, State and Private sponsors, uniquely matched to researchers' expertise. Researchers can save
+                searches and receive weekly updates of new matched opportunities.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- InfoReady -->
+        <div class="sys infoready research ucf">
+          <p class="sysimg">
+            <a href="https://ucf.infoready4.com/" target="_blank">
+              <img src="images/ldg_infoready.png" height="113" width="214" alt="pivot">
+            </a>
+          </p>
+          <a href="https://ucf.infoready4.com/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.infoready .sysimg').hide();"
+              onMouseOut="$('.infoready .sysimg').show();">
+              <p class="normaltext">
+                Limited Submissions and Internal Programs Submission portal
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">InfoReady</span><br>
+                UCF InfoReady is a support software to apply to limited submissions and internal programs. It can be
+                easily accessed via single sign-on and features a user-friendly homepage that lists all active
+                opportunities and provides a convenient submission deadline calendar.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- Citi -->
+        <div class="sys citi research ucf">
+          <p class="sysimg">
+            <a href="http://citi.research.ucf.edu" target="_blank">
+              <img src="images/ldg_citi.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="http://citi.research.ucf.edu" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.citi .sysimg').hide();"
+              onMouseOut="$('.citi .sysimg').show();">
+              <p class="normaltext">
+                Collaborative Institutional Training Initiative
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Collaborative Institutional Training Initiative</span><br>
+                The CITI Program at the University of Miami provides web-based training materials to serve millions of
+                learners at academic institutions, government agencies, and commercial organizations in the U.S. and
+                around the world. CITI provides educational training content that promotes the quality of and public
+                trust in the research enterprise.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <h1 style="font-size:22px">Contract and Document Management</h1>
+      <div class="syslist">
+        <!--- Move -->
+        <!-- 
                         <div class="sys move research departmental">
                             <p class="sysimg" >
                                 <a href="https://move.research.ucf.edu/managecontract.cfm" target="_blank">
@@ -666,47 +740,54 @@
                             </a>
                         </div>
                         -->
-                        <!--- CobbleStone -->
-                        <div class="sys cobblestone research ucf">
-                            <p class="sysimg" >
-                                <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
-                                <img src="images/ldg_CobbleStone.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.cobblestone .sysimg').hide();" onMouseOut="$('.cobblestone .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Manage and review contracts submitted to Office of General Counsel
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">CobbleStone Systems</span><br>
-                                    CobbleStone is a cloud software solution that allows any university employee to submit a contract that requires legal review from one of the four legal offices. The system allows the legal office to gather internal approvals and secure signatures to execute agreements and allows the submitter to monitor their contract's progression during the review lifecycle.                                 
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                        <!--- Tera -->
-                        <div class="sys tera research departmental">
-                            <p class="sysimg" >
-                                <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
-                                <img src="images/ldg_tera.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.tera .sysimg').hide();" onMouseOut="$('.tera .sysimg').show();"> 
-                                <p class="normaltext">
-                                    ORC repository for research-related documents
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">The Electronic Research Archive</span><br>
-                                    TERA is a web system provides a digital repository for electronic documents that pertain to sponsored research projects or Research Foundation. The TERA documents for a research project can be accessed by the researchers and research administrators in PARIS.                                    
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-					
-					<!-- <h1 style="font-size:22px">Commercialization</h1>   
+        <!--- CobbleStone -->
+        <div class="sys cobblestone research ucf">
+          <p class="sysimg">
+            <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
+              <img src="images/ldg_CobbleStone.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://ucf.cobblestonesystems.com/core" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.cobblestone .sysimg').hide();"
+              onMouseOut="$('.cobblestone .sysimg').show();">
+              <p class="normaltext">
+                Manage and review contracts submitted to Office of General Counsel
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">CobbleStone Systems</span><br>
+                CobbleStone is a cloud software solution that allows any university employee to submit a contract that
+                requires legal review from one of the four legal offices. The system allows the legal office to gather
+                internal approvals and secure signatures to execute agreements and allows the submitter to monitor their
+                contract's progression during the review lifecycle.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!--- Tera -->
+        <div class="sys tera research departmental">
+          <p class="sysimg">
+            <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
+              <img src="images/ldg_tera.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://tera.research.ucf.edu/mainmenu.cfm" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.tera .sysimg').hide();"
+              onMouseOut="$('.tera .sysimg').show();">
+              <p class="normaltext">
+                ORC repository for research-related documents
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">The Electronic Research Archive</span><br>
+                TERA is a web system provides a digital repository for electronic documents that pertain to sponsored
+                research projects or Research Foundation. The TERA documents for a research project can be accessed by
+                the researchers and research administrators in PARIS.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- <h1 style="font-size:22px">Commercialization</h1>   
 					<div class="syslist">
                         <div class="sys salesforce research departmental">
                             <p class="sysimg" >
@@ -727,178 +808,203 @@
                             </a>
                         </div>
                     </div> -->
-                    <h1 style="font-size:22px">Other Research Administration</h1>   
-                    <div class="syslist">
-						<!-- Argis -->
-						<div class="sys argis research ucf">
-                        	<p class="sysimg" >
-                            	<a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
-                            	<img src="images/ldg_argis.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.argis .sysimg').hide();" onMouseOut="$('.argis .sysimg').show();"> 
-                            	<p class="normaltext">
-	                            	Manage research and IP from proposal to commercialization
-                                </p>
-                                <p class="expandtext"> 
-                                	<span class="expandtexthead">Academic Research & Grants Information System</span><br>
-									ARGIS is a web-based enterprise system which provides users direct access to the information needed for managing funded research. The system tracks proposals, funding, licenses, and other agreements. The system also allows users to report and document hazards and conflicts of interest that impact compliance requirements.                                    
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                        
-                        <!--- Conflict of Interest -->
-                        <div class="sys coi research ucf original">
-                            <p class="sysimg" >
-                                <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
-                                <img src="images/ldg_coi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
-                            <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Disclose and review potential conflicts of interest
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
-                                    The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                </p>
-                            </div>
-                            </a> 
-                        </div>
+      <h1 style="font-size:22px">Other Research Administration</h1>
+      <div class="syslist">
+        <!-- Argis -->
+        <div class="sys argis research ucf">
+          <p class="sysimg">
+            <a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin"
+              target="_blank">
+              <img src="images/ldg_argis.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://argis.research.ucf.edu/index.cfm?fuseaction=home.main&Content=home.adminlogin"
+            target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.argis .sysimg').hide();"
+              onMouseOut="$('.argis .sysimg').show();">
+              <p class="normaltext">
+                Manage research and IP from proposal to commercialization
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Academic Research & Grants Information System</span><br>
+                ARGIS is a web-based enterprise system which provides users direct access to the information needed for
+                managing funded research. The system tracks proposals, funding, licenses, and other agreements. The
+                system also allows users to report and document hazards and conflicts of interest that impact compliance
+                requirements.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                        <!--- EFACS -->
-                        <div class="sys efacs research departmental" style="background-color:#f3f3f3; line-height:1.25em;">
-                            <p class="sysimg">
-                                <img src="images/ldg_efacs.png" alt="myresearch" class="disabled">
-                            </p>
-                            <div class="systext" style="clear: both; background-color:#e9e9e9;" onMouseOver="$('.efacs .sysimg').hide();" onMouseOut="$('.efacs .sysimg').show();"> 
-                                <p class="normaltext">
-                                    eFacilities and Administrative Cost System
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">eFacilities and Administrative Cost System</span><br>
-                                    Huron's efacs&#174; system provides a flexible web-based cost system for the calculation and negotiation of the facilities and administrative (F&A) rates. The data models available and created within efacs are used by UCF sponsored research to determine the appropriate F&A rate to be applied on all university research facilities.
-                                    
-                                </p>
-                            </div>
-                        </div>
+        <!--- Conflict of Interest -->
+        <div class="sys coi research ucf original">
+          <p class="sysimg">
+            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+              <img src="images/ldg_coi.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();"
+              onMouseOut="$('.coi .sysimg').show();">
+              <p class="normaltext">
+                Disclose and review potential conflicts of interest
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
+                The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows
+                the submission and review of disclosure statements relating to conflict of interest and commitment on
+                research activity
+              </p>
+            </div>
+          </a>
+        </div>
 
+        <!--- EFACS -->
+        <div class="sys efacs research departmental" style="background-color:#f3f3f3; line-height:1.25em;">
+          <p class="sysimg">
+            <img src="images/ldg_efacs.png" alt="myresearch" class="disabled">
+          </p>
+          <div class="systext" style="clear: both; background-color:#e9e9e9;" onMouseOver="$('.efacs .sysimg').hide();"
+            onMouseOut="$('.efacs .sysimg').show();">
+            <p class="normaltext">
+              eFacilities and Administrative Cost System
+            </p>
+            <p class="expandtext">
+              <span class="expandtexthead">eFacilities and Administrative Cost System</span><br>
+              Huron's efacs&#174; system provides a flexible web-based cost system for the calculation and negotiation
+              of the facilities and administrative (F&A) rates. The data models available and created within efacs are
+              used by UCF sponsored research to determine the appropriate F&A rate to be applied on all university
+              research facilities.
 
-                        <!--- iThenticate -->
-                        <div class="sys iThenticate research ucf">
-                            <a href="https://ithenticate.research.ucf.edu/" target="_blank">
-                                <p class="sysimg">
-                                    <img src="images/ldg_ithenticate.png" alt="myresearch">
-                                </p>
-                            </a>
-                            <a href="https://ithenticate.research.ucf.edu/" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.iThenticate .sysimg').hide();"
-                                    onMouseOut="$('.iThenticate .sysimg').show();">
-                                    <p class="normaltext">
-                                        iThenticate is an online plagiarism detection software
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">iThenticate</span><br>
-                                        iThenticate is an online plagiarism detection software tool that makes it easier to recognize inadvertent plagiarism.
-                                        Faculty can compare documents (i.e. proposals, manuscripts, dissertations/thesis, journals) against a database of web
-                                        pages and content items including published works. iThenticate is not a repository and is not intended for student coursework, papers, or exams.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+            </p>
+          </div>
+        </div>
 
 
-                        <!--- Sophia -->
-                        <div class="sys sophia research ucf">
-                            <a href="https://ucf.wellspringsoftware.net/kms/auth/login/" target="_blank">
-                                <p class="sysimg">
-                                    <img style="margin-top: 1vw;" src="images/sophia_logo.gif" alt="myresearch" width="100%">
-                                </p>
-                            </a>
-                            <a href="https://ucf.wellspringsoftware.net/kms/auth/login/" target="_blank">
-                                <div class="systext" style="clear: both" onMouseOver="$('.sophia .sysimg').hide();"
-                                    onMouseOut="$('.sophia .sysimg').show();">
-                                    <p class="normaltext">
-                                        Manage IP from disclosure stage to commercialization
-                                    </p>
-                                    <p class="expandtext">
-                                        <span class="expandtexthead">Sophia</span><br>
-                                        The Sophia database from Wellspring is used by the Technology Transfer Office to manage 
-                                        invention disclosures, intellectual property filings, technology promotion, and license agreements.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+        <!--- iThenticate -->
+        <div class="sys iThenticate research ucf">
+          <a href="https://ithenticate.research.ucf.edu/" target="_blank">
+            <p class="sysimg">
+              <img src="images/ldg_ithenticate.png" alt="myresearch">
+            </p>
+          </a>
+          <a href="https://ithenticate.research.ucf.edu/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.iThenticate .sysimg').hide();"
+              onMouseOut="$('.iThenticate .sysimg').show();">
+              <p class="normaltext">
+                iThenticate is an online plagiarism detection software
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">iThenticate</span><br>
+                iThenticate is an online plagiarism detection software tool that makes it easier to recognize
+                inadvertent plagiarism.
+                Faculty can compare documents (i.e. proposals, manuscripts, dissertations/thesis, journals) against a
+                database of web
+                pages and content items including published works. iThenticate is not a repository and is not intended
+                for student coursework, papers, or exams.
+              </p>
+            </div>
+          </a>
+        </div>
 
-                        <!-- To Arrange the order -->
-                        <div class="sys coi research ucf order">
-                            <p class="sysimg" >
-                                <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
-                                <img src="images/ldg_coi.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank" >
-                                <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();" onMouseOut="$('.coi .sysimg').show();"> 
-                                    <p class="normaltext">
-                                        Disclose and review potential conflicts of interest
-                                    </p>
-                                    <p class="expandtext"> 
-                                        <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
-                                        The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows the submission and review of disclosure statements relating to conflict of interest and commitment on research activity                                    </p>
-                                </div>
-                            </a> 
-                        </div>
-                        <div class="sys lsfo research ucf order">
-                            <p class="sysimg" >
-                                <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
-                                <img src="images/ldg_ip.png" alt="myresearch">
-                                </a>
-                            </p>
-                            <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
-                            <div class="systext" style="clear: both" onMouseOver="$('.lsfo .sysimg').hide();" onMouseOut="$('.lsfo .sysimg').show();"> 
-                                <p class="normaltext">
-                                    Find opportunities; submit and review white papers
-                                </p>
-                                <p class="expandtext"> 
-                                    <span class="expandtexthead">Internal Opportunities</span><br>
-                                    The Internal Opportunities site includes information about Limited Submission opportunities from federal, state, and private programs, and UCF Internal Programs (seed funds, matched funds) facilitated through the Office of Research & Commercialization (ORC).                                     
-                                </p>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-    			</div>
-				<!-- End section wrapper-->
-			</div>
-		   <!-- End sso section-->
 
-		   <!-- insert ris header and footer -->
-			<script type="text/javascript" id="header_location_id">
-				var header_location = "https://header.research.ucf.edu";
-				
-                if (window.location.href.indexOf("dev") > -1) {
-					header_location = "https://header.dev.research.ucf.edu";
-				}
-				
-				var script = document.createElement('script');
-				script.onload = function(){
-					loadFooter();	
-				};
+        <!--- Sophia -->
+        <div class="sys sophia research ucf">
+          <a href="https://ucf.wellspringsoftware.net/kms/auth/login/" target="_blank">
+            <p class="sysimg">
+              <img style="margin-top: 1vw;" src="images/sophia_logo.gif" alt="myresearch" width="100%">
+            </p>
+          </a>
+          <a href="https://ucf.wellspringsoftware.net/kms/auth/login/" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.sophia .sysimg').hide();"
+              onMouseOut="$('.sophia .sysimg').show();">
+              <p class="normaltext">
+                Manage IP from disclosure stage to commercialization
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Sophia</span><br>
+                The Sophia database from Wellspring is used by the Technology Transfer Office to manage
+                invention disclosures, intellectual property filings, technology promotion, and license agreements.
+              </p>
+            </div>
+          </a>
+        </div>
 
-				script.src = header_location+"/js/ris_footer.js";
-                document.getElementById("header_location_id").parentNode.appendChild(script);
-                
-                var script = document.createElement('script');
-				script.src = header_location+"/js/ris_header.js";
-                document.getElementById("header_location_id").parentNode.appendChild(script);
+        <!-- To Arrange the order -->
+        <div class="sys coi research ucf order">
+          <p class="sysimg">
+            <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+              <img src="images/ldg_coi.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://argis.research.ucf.edu/coi/index.cfm?fuseaction=home.adminlogin" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.coi .sysimg').hide();"
+              onMouseOut="$('.coi .sysimg').show();">
+              <p class="normaltext">
+                Disclose and review potential conflicts of interest
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Conflict of Interest & Commitment System</span><br>
+                The Conflict of Interest & Commitment System provides information regarding UCF's policies and allows
+                the submission and review of disclosure statements relating to conflict of interest and commitment on
+                research activity
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="sys lsfo research ucf order">
+          <p class="sysimg">
+            <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
+              <img src="images/ldg_ip.png" alt="myresearch">
+            </a>
+          </p>
+          <a href="https://argis.research.ucf.edu/internalopportunities/Users/LogOn.aspx" target="_blank">
+            <div class="systext" style="clear: both" onMouseOver="$('.lsfo .sysimg').hide();"
+              onMouseOut="$('.lsfo .sysimg').show();">
+              <p class="normaltext">
+                Find opportunities; submit and review white papers
+              </p>
+              <p class="expandtext">
+                <span class="expandtexthead">Internal Opportunities</span><br>
+                The Internal Opportunities site includes information about Limited Submission opportunities from
+                federal, state, and private programs, and UCF Internal Programs (seed funds, matched funds) facilitated
+                through the Office of Research & Commercialization (ORC).
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End section wrapper-->
+  </div>
+  <!-- End sso section-->
 
-			</script>
+  <!-- insert ris header and footer -->
+  <script type="text/javascript" id="header_location_id">
+    var header_location = "https://header.research.ucf.edu";
 
-			<div id="ucf-orc-footer">
-			</div>
+    if (window.location.href.indexOf("dev") > -1) {
+      header_location = "https://header.dev.research.ucf.edu";
+    }
 
-		</body>
-		<!-- End of body-->
+    var script = document.createElement('script');
+    script.onload = function () {
+      loadFooter();
+    };
+
+    script.src = header_location + "/js/ris_footer.js";
+    document.getElementById("header_location_id").parentNode.appendChild(script);
+
+    var script = document.createElement('script');
+    script.src = header_location + "/js/ris_header.js";
+    document.getElementById("header_location_id").parentNode.appendChild(script);
+
+  </script>
+
+  <div id="ucf-orc-footer">
+  </div>
+
+</body>
+<!-- End of body-->
+
 </html>
