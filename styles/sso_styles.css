@@ -59,7 +59,7 @@ body {
 	font-family: "OpenSans",CenturyGothic,Helvetica,sans-serif;
 	}
 
-h2 {
+h1 {
 	font-size: 2em;
 	}
 	
@@ -114,7 +114,7 @@ h2 {
 	text-transform: uppercase;
 	}
 
-.banner h2 {
+.banner h1 {
 	padding: .25em 0 0 0;
 	}
 
@@ -127,7 +127,7 @@ h2 {
 	overflow: hidden;
 	}
 	
-.main h2 {
+.main h1 {
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: .25em 0 .75em 0;
@@ -248,7 +248,7 @@ ol li {
 	text-transform: uppercase;
 	}
 	
-.banner h2 {
+.banner h1 {
 	font-size: 1.5em;
 	}
 
