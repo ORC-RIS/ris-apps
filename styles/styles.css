@@ -201,7 +201,7 @@ a {
 	padding:5px;
 	background-color:#f3f3f3;
 	border-radius: 0px 0px 10px 10px;
-	color:#646464;
+	color:#333333;
 	}
 	
 .systext:hover {
@@ -210,7 +210,7 @@ a {
 	padding:5px;
 	background-color:#f3f3f3;
 	border-radius: 10px 10px 10px 10px;
-	color:#646464;
+	color:#333333;
 	
 	}
 	
@@ -219,7 +219,7 @@ a {
 	min-height:212px;
 	max-height:212px;
 	font-size:0.8em;
-	line-height: 1.5em;
+	line-height: 1.5;
 	
 }
 
@@ -228,7 +228,7 @@ a {
 	text-align: left;
 	text-justify: newspaper;
 	padding:5px;
-	color:#646464;
+	color:#333333;
 	min-height:202px;
 	max-height:202px;
 	font-size:0.8em;	
@@ -246,7 +246,7 @@ a {
 	display:none;
 	text-align: justify;
 	padding:15px;
-	color:#646464;
+	color:#333333;
 }
 
 .sys .expandLink {
@@ -269,7 +269,7 @@ a {
 .sysimg {
 	padding:5px;
 	margin-top:20px;
-	color:#646464;
+	color:#333333;
 	min-height:145px;
 	}	
 	
