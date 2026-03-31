@@ -59,7 +59,7 @@ body {
 	font-family: "OpenSans",CenturyGothic,Helvetica,sans-serif;
 	}
 
-h2 {
+h1 {
 	font-size: 2em;
 	}
 	
@@ -104,7 +104,7 @@ h2 {
 	padding: 1em 0 1em 0;
 	overflow: hidden;
 	border-style: solid;
-	border-color: #d8a400;
+	border-color: #0262b6;
 	border-top-width: 1px;
 	border-bottom-width: 1px;
 	}
@@ -114,7 +114,7 @@ h2 {
 	text-transform: uppercase;
 	}
 
-.banner h2 {
+.banner h1 {
 	padding: .25em 0 0 0;
 	}
 
@@ -127,7 +127,7 @@ h2 {
 	overflow: hidden;
 	}
 	
-.main h2 {
+.main h1 {
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: .25em 0 .75em 0;
@@ -135,7 +135,7 @@ h2 {
 	
 .main p {
 	padding: 0 0 1em 0;
-	line-height: 1.4em;
+	line-height: 1.5em;
 	}
 	
 .warning {
@@ -149,7 +149,7 @@ h2 {
 .main a {
 	text-decoration: none;
 	font-size: 1.5em;
-	color: #d8a400;
+	color: #0262b6;
 	}
 
 .systems a {
@@ -248,7 +248,7 @@ ol li {
 	text-transform: uppercase;
 	}
 	
-.banner h2 {
+.banner h1 {
 	font-size: 1.5em;
 	}
 
