@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Bitter|Cabin|Montserrat" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -41,6 +41,7 @@
 
 <body>
   <!--- --->
+  <main>
   <div class="navbar navbar-default">
     <div class="container-fluid">
       <div class="container" style="padding:0px;">
@@ -172,11 +173,11 @@
     <!--Single Sign On Overview Section-->
     <div class="section">
       <img class="monitor" src="images/irismonitor.png" alt="monitor">
-      <h2 class="shead">IRIS Sign-on Help</h2>
+      <h1 class="shead">IRIS Sign-on Help</h1>
       <p>To log into iRIS, please use your iRIS credentials (non Single Sign-on).</p>
       <p>
         If you have accessed iRIS system before but have forgotten your username or password, please reset it through
-        the <a href="https://myid.research.ucf.edu/" target="_blank">ID Management system</a>.
+        the <a href="https://myid.research.ucf.edu/" target="_blank"><span style="text-decoration: underline !important;">ID Management system </span></a>.
       </p>
       <p>
         After a username/password reset, you <strong style="text-decoration:underline">MUST</strong> change your
@@ -185,19 +186,19 @@
       </p>
       <p>
         If you have never accessed iRIS system, please download the following form and submit it to <a
-          href="mailto:GRITservicedesk@ucf.edu">GRITservicedesk@ucf.edu</a>:
+          href="mailto:GRITservicedesk@ucf.edu"><span style="text-decoration:underline !important;"> GRITservicedesk@ucf.edu </span></a>:
       </p>
       <p>
-        <center>
+        <div style="text-align:center;">
           <a href="http://it.research.ucf.edu/Forms/AccountRequestForm.pdf" title="Download Account Request Form"
             style="color:black;">
-            <img src="images/ldg_form.png" width="104" height="127" />
+            <img src="images/ldg_form.png" width="104" height="127" alt="download account request form"/>
             <br>
             Download the account request form,<br>
             complete it, and send it to<br>
           </a>
-          <a href="mailto:GRITservicedesk@ucf.edu">GRITservicedesk@ucf.edu</a>
-        </center>
+          <a href="mailto:GRITservicedesk@ucf.edu" style="display:inline-block; min-width: 44px !important;min-height: 44px !important; line-height: 44px; text-align: center !important;">GRITservicedesk@ucf.edu</a>
+        </div>
       </p>
     </div>
     <!--End of SSO Overview Section-->
@@ -223,7 +224,7 @@
 
   <div id="ucf-orc-footer">
   </div>
-
+  </main>
 </body>
 
 </html>
